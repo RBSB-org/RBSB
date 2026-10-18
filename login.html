@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | EVENTWALE</title>
+
+    <meta name="description"
+        content="Log in to EVENTWALE to explore event-planning features and organize your celebration ideas.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">EVENT<span>WALE</span></a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="venues.html">Venues</a>
+            <a href="services.html">Services</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+     <!--   <div class="header-actions">
+            <a href="login.html" class="login-link active">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+-->
+    </header>
+
+
+    <!-- LOGIN SECTION -->
+    <main class="auth-main">
+
+        <section class="auth-container">
+
+            <!-- LEFT WELCOME PANEL -->
+            <div class="auth-welcome-panel">
+
+                <span class="section-tag">WELCOME BACK</span>
+
+                <h1>Your Next Celebration Awaits</h1>
+
+                <p>
+                    Continue exploring event ideas, discovering venues
+                    and organizing your celebration plans with EVENTWALE.
+                </p>
+
+                <div class="auth-feature-list">
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Explore memorable event ideas</p>
+                    </div>
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Discover venues and services</p>
+                    </div>
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Organize your event budget</p>
+                    </div>
+
+                </div>
+
+                <div class="auth-decoration">
+                    <span>✧</span>
+                    <span>✦</span>
+                    <span>✧</span>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT LOGIN FORM -->
+            <div class="auth-form-panel">
+
+                <div class="auth-form-heading">
+
+                    <a href="index.html" class="auth-logo">
+                        EVENT<span>WALE</span>
+                    </a>
+
+                    <h2>Welcome Back!</h2>
+
+                    <p>
+                        Enter your details to continue.
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm" class="auth-form">
+
+                    <!-- EMAIL -->
+                    <div class="auth-field">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            name="loginEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="auth-field">
+
+                        <div class="auth-label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <a
+                                href="#forgot-password"
+                                id="forgotPasswordLink"
+                                class="forgot-password-link">
+
+                                Forgot Password?
+
+                            </a>
+
+                        </div>
+
+                        <div class="password-input-wrapper">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="toggleLoginPassword"
+                                aria-label="Show password"
+                                aria-pressed="false">
+
+                                Show
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REMEMBER ME -->
+                    <div class="auth-options">
+
+                        <label class="auth-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                                name="rememberMe">
+
+                            <span>Remember me</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+                    <button
+                        type="submit"
+                        id="loginSubmitBtn"
+                        class="primary-btn auth-submit-btn">
+
+                        Login to Your Account
+
+                    </button>
+
+
+                    <!-- FORM MESSAGE -->
+                    <p
+                        id="loginMessage"
+                        class="auth-message"
+                        role="status"
+                        aria-live="polite">
+                    </p>
+
+
+                    <!-- SIGNUP LINK -->
+                    <div class="auth-switch">
+
+                        <p>
+                            Don't have an account?
+                            <a href="signup.html">Create Account</a>
+                        </p>
+
+                    </div>
+
+                </form>
+
+
+                <!-- GOOGLE LOGIN -->
+                <div class="google-login-section">
+
+                    <p>Or continue with</p>
+
+                    <button
+                        type="button"
+                        id="googleLoginBtn"
+                        class="google-login-btn">
+
+                        <img
+                            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                            alt=""
+                            width="20"
+                            height="20">
+
+                        Continue with Google
+
+                    </button>
+
+                </div>
+
+
+                <!-- ADMIN LOGIN OPTION -->
+                <div class="admin-login-callout">
+                    <a href="admin-login.html" class="admin-login-link">Login via Admin <span aria-hidden="true">→</span></a>
+                </div>
+
+
+                <!-- AUTHENTICATION NOTICE -->
+                <div class="auth-demo-note">
+
+                    <p>
+                        <strong>Secure Authentication:</strong>
+                        EVENTWALE uses Firebase Authentication
+                        for email/password and Google sign-in.
+                    </p>
+
+                </div>
+
+
+                <a href="index.html" class="back-home-link">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 EVENTWALE.
+                Created as a student web-development project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FIREBASE LOGIN SCRIPT -->
+    <script type="module">
+
+        import {
+            auth,
+            googleProvider
+        } from "./firebase.js";
+
+        import {
+            signInWithEmailAndPassword,
+            signInWithPopup,
+            sendPasswordResetEmail,
+            signOut,
+            setPersistence,
+            browserLocalPersistence,
+            browserSessionPersistence
+        } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+
+
+        // ELEMENTS
+        const loginForm = document.getElementById("loginForm");
+
+        const emailInput = document.getElementById("loginEmail");
+
+        const passwordInput = document.getElementById("loginPassword");
+
+        const togglePassword =
+            document.getElementById("toggleLoginPassword");
+
+        const googleLoginBtn =
+            document.getElementById("googleLoginBtn");
+
+        const loginSubmitBtn =
+            document.getElementById("loginSubmitBtn");
+
+        const authMessage =
+            document.getElementById("loginMessage");
+
+        const forgotPasswordLink =
+            document.getElementById("forgotPasswordLink");
+
+        const rememberMe =
+            document.getElementById("rememberMe");
+
+
+        // DISPLAY MESSAGES
+        function showMessage(message, isError = true) {
+
+            authMessage.textContent = message;
+
+            authMessage.style.color = isError
+                ? "#c0392b"
+                : "#16803c";
+
+        }
+
+
+        // SHOW / HIDE PASSWORD
+        togglePassword.addEventListener("click", function () {
+
+            const isHidden = passwordInput.type === "password";
+
+            passwordInput.type = isHidden ? "text" : "password";
+
+            togglePassword.textContent = isHidden ? "Hide" : "Show";
+
+            togglePassword.setAttribute(
+                "aria-label",
+                isHidden ? "Hide password" : "Show password"
+            );
+
+            togglePassword.setAttribute(
+                "aria-pressed",
+                String(isHidden)
+            );
+
+        });
+
+
+        // EMAIL AND PASSWORD LOGIN
+        loginForm.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            const password = passwordInput.value;
+
+            if (!email || !password) {
+
+                showMessage("Please enter your email and password.");
+
+                return;
+
+            }
+
+            loginSubmitBtn.disabled = true;
+
+            showMessage("Signing in...", false);
+
+            try {
+
+                // Choose whether the login persists after closing the browser.
+                await setPersistence(
+                    auth,
+                    rememberMe.checked
+                        ? browserLocalPersistence
+                        : browserSessionPersistence
+                );
+
+                const userCredential =
+                    await signInWithEmailAndPassword(
+                        auth,
+                        email,
+                        password
+                    );
+
+                const user = userCredential.user;
+
+                // Require verified email addresses.
+                if (!user.emailVerified) {
+
+                    await signOut(auth);
+
+                    showMessage(
+                        "Please verify your email before logging in. Check your inbox for the verification email."
+                    );
+
+                    return;
+
+                }
+
+                showMessage(
+                    "Login successful! Welcome to EVENTWALE.",
+                    false
+                );
+
+                // Redirect after successful login.
+                setTimeout(function () {
+
+                    window.location.replace("index.html");
+
+                }, 800);
+
+            } catch (error) {
+
+                console.error("Login error:", error);
+
+                if (
+                    error.code === "auth/invalid-credential" ||
+                    error.code === "auth/wrong-password" ||
+                    error.code === "auth/user-not-found"
+                ) {
+
+                    showMessage("Incorrect email or password.");
+
+                } else if (error.code === "auth/invalid-email") {
+
+                    showMessage("Please enter a valid email address.");
+
+                } else if (error.code === "auth/too-many-requests") {
+
+                    showMessage(
+                        "Too many attempts. Please wait and try again later."
+                    );
+
+                } else if (error.code === "auth/network-request-failed") {
+
+                    showMessage(
+                        "Network error. Check your internet connection and try again."
+                    );
+
+                } else {
+
+                    showMessage(
+                        "Login failed. Please try again. " + error.message
+                    );
+
+                }
+
+            } finally {
+
+                loginSubmitBtn.disabled = false;
+
+            }
+
+        });
+
+
+        // GOOGLE LOGIN
+        googleLoginBtn.addEventListener("click", async function () {
+
+            googleLoginBtn.disabled = true;
+
+            showMessage("Opening Google sign-in...", false);
+
+            try {
+
+                await signInWithPopup(auth, googleProvider);
+
+                showMessage(
+                    "Google login successful! Redirecting...",
+                    false
+                );
+
+                setTimeout(function () {
+
+                    window.location.replace("index.html");
+
+                }, 500);
+
+            } catch (error) {
+
+                console.error("Google login error:", error);
+
+                if (error.code === "auth/popup-closed-by-user") {
+
+                    showMessage("Google sign-in was cancelled.");
+
+                } else if (
+                    error.code === "auth/popup-blocked"
+                ) {
+
+                    showMessage(
+                        "Your browser blocked the Google sign-in popup. Open EVENTWALE directly in Chrome and try again."
+                    );
+
+                } else {
+
+                    showMessage(
+                        "Google login failed: " + error.message
+                    );
+
+                }
+
+            } finally {
+
+                googleLoginBtn.disabled = false;
+
+            }
+
+        });
+
+
+        // FORGOT PASSWORD
+        forgotPasswordLink.addEventListener("click", async function (event) {
+
+            event.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            if (!email) {
+
+                showMessage(
+                    "Enter your email address first, then click Forgot Password."
+                );
+
+                emailInput.focus();
+
+                return;
+
+            }
+
+            try {
+
+                await sendPasswordResetEmail(auth, email);
+
+                showMessage(
+                    "If an account exists for that email, a password-reset email will be sent. Check your inbox and spam folder.",
+                    false
+                );
+
+            } catch (error) {
+
+                console.error("Password reset error:", error);
+
+                if (error.code === "auth/invalid-email") {
+
+                    showMessage("Please enter a valid email address.");
+
+                } else {
+
+                    showMessage(
+                        "Unable to request a password reset right now. Please try again later."
+                    );
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

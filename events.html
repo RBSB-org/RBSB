@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore weddings, birthdays, engagements, college festivals and corporate events with EVENTWALE.">
+
+    <title>Explore Events | EVENTWALE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                EVENT<span>WALE</span>
+            </a>
+
+            <nav class="main-navigation" aria-label="Main navigation">
+
+                <a href="index.html" class="nav-link">Home</a>
+
+                <a href="events.html" class="nav-link active">Events</a>
+
+                <a href="venues.html" class="nav-link">Venues</a>
+
+                <a href="services.html" class="nav-link">Services</a>
+
+                <a href="budget.html" class="nav-link">Budget Planner</a>
+
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <a href="contact.html" class="nav-link">Contact</a>
+
+            </nav>
+
+        
+
+        <div class="header-actions">
+    <span class="auth-loading">Checking account...</span>
+</div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+        <!-- ================= PAGE HERO ================= -->
+
+        <section class="events-hero">
+
+            <div class="container events-hero-content">
+
+                <p class="section-label">
+                    FIND YOUR PERFECT CELEBRATION
+                </p>
+
+                <h1>
+                    Explore Events
+                </h1>
+
+                <p>
+                    Every celebration has a story.
+                    Discover ideas and plan an event worth remembering.
+                </p>
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">Home</a>
+
+                    <span>/</span>
+
+                    <span>Events</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EVENT INTRODUCTION ================= -->
+
+        <section class="events-intro section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        SOMETHING FOR EVERY OCCASION
+                    </p>
+
+                    <h2>
+                        What Are You Celebrating?
+                    </h2>
+
+                    <p class="section-description">
+                        From intimate gatherings to grand celebrations,
+                        find inspiration for your next special occasion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EVENT SEARCH AND FILTERS ================= -->
+
+        <section class="events-explorer-section">
+
+            <div class="container">
+
+                <div class="events-filter-panel">
+
+                    <div class="events-filter-heading">
+
+                        <div>
+                            <h2>Find Your Event</h2>
+
+                            <p>Choose an occasion and explore your options.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form class="events-filter-form" id="eventsFilterForm">
+
+                        <div class="search-field">
+
+                            <label for="eventSearch">
+                                Search Events
+                            </label>
+
+                            <input
+                                type="search"
+                                id="eventSearch"
+                                name="search"
+                                placeholder="Search weddings, birthdays...">
+
+                        </div>
+
+
+                        <div class="search-field">
+
+                            <label for="categoryFilter">
+                                Event Category
+                            </label>
+
+                            <select id="categoryFilter" name="category">
+
+                                <option value="all">All Categories</option>
+
+                                <option value="wedding">Weddings</option>
+
+                                <option value="birthday">Birthdays</option>
+
+                                <option value="engagement">Engagements</option>
+
+                                <option value="college">College Events</option>
+
+                                <option value="corporate">Corporate Events</option>
+
+                                <option value="anniversary">Anniversaries</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="search-field">
+
+                            <label for="eventLocationFilter">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="eventLocationFilter"
+                                name="location"
+                                placeholder="Enter a city">
+
+                        </div>
+
+
+                        <button type="submit" class="search-button">
+                            Search Events
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ================= CATEGORY QUICK LINKS ================= -->
+
+                <div class="event-category-links">
+
+                    <a href="#weddings" class="event-category-link">
+                        Weddings
+                    </a>
+
+                    <a href="#birthdays" class="event-category-link">
+                        Birthdays
+                    </a>
+
+                    <a href="#engagements" class="event-category-link">
+                        Engagements
+                    </a>
+
+                    <a href="#college-events" class="event-category-link">
+                        College Events
+                    </a>
+
+                    <a href="#corporate-events" class="event-category-link">
+                        Corporate Events
+                    </a>
+
+                    <a href="#anniversaries" class="event-category-link">
+                        Anniversaries
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED EVENTS ================= -->
+
+        <section class="featured-events-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        POPULAR CHOICES
+                    </p>
+
+                    <h2>
+                        Discover Our Event Categories
+                    </h2>
+
+                    <p class="section-description">
+                        Explore popular occasions and find the right inspiration
+                        for your celebration.
+                    </p>
+
+                </div>
+
+
+                <div class="events-grid" id="eventsGrid">
+
+
+                    <!-- WEDDINGS -->
+
+                    <article class="event-card" id="weddings"
+                        data-category="wedding"
+                        data-location="ludhiana">
+
+                        <a href="booking.html?event=wedding"
+                            class="event-card-image wedding-event-image"
+                            aria-label="Explore wedding events">
+
+                        </a>
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
+                                WEDDINGS
+                            </span>
+
+                            <h3>Wedding Celebrations</h3>
+
+                            <p>
+                                Make your special day memorable with beautiful
+                                decorations, venues and event services.
+                            </p>
+
+                            <div class="event-card-meta">
+
+                                <span>📍 Multiple locations</span>
+
+                                <span>Flexible budgets</span>
+
+                            </div>
+
+                            <a href="booking.html?event=wedding"
+                                class="event-card-button">
+                                Explore Wedding Options →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BIRTHDAYS -->
+
+                    <article class="event-card" id="birthdays"
+                        data-category="birthday"
+                        data-location="ludhiana">
+
+                        <a href="booking.html?event=birthday"
+                            class="event-card-image birthday-event-image"
+                            aria-label="Explore birthday events">
+
+                        </a>
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
+                                BIRTHDAYS
+                            </span>
+
+                            <h3>Birthday Parties</h3>
+
+                            <p>
+                                Celebrate another wonderful year with creative
+                                themes, cakes and unforgettable moments.
+                            </p>
+
+                            <div class="event-card-meta">
+
+                                <span>📍 Multiple locations</span>
+
+                                <span>Flexible budgets</span>
+
+                            </div>
+
+                            <a href="booking.html?event=birthday"
+                                class="event-card-button">
+                                Explore Birthday Options →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ENGAGEMENTS -->
+
+                    <article class="event-card" id="engagements"
+                        data-category="engagement"
+                        data-location="chandigarh">
+
+                        <a href="booking.html?event=engagement"
+                            class="event-card-image engagement-event-image"
+                            aria-label="Explore engagement events">
+
+                        </a>
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
+                                ENGAGEMENTS
+                            </span>
+
+                            <h3>Engagement Ceremonies</h3>
+
+                            <p>
+                                Celebrate the beginning of a new journey
+                                with elegant decorations and beautiful settings.
+                            </p>
+
+                            <div class="event-card-meta">
+
+                                <span>📍 Multiple locations</span>
+
+                                <span>Flexible budgets</span>
+
+                            </div>
+
+                            <a href="booking.html?event=engagement"
+                                class="event-card-button">
+                                Explore Engagement Options →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- COLLEGE EVENTS -->
+
+                    <article class="event-card" id="college-events"
+                        data-category="college"
+                        data-location="ludhiana">
+
+                        <a href="booking.html?event=college"
+                            class="event-card-image college-event-image"
+                            aria-label="Explore college events">
+
+                        </a>
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
+                                COLLEGE EVENTS
+                            </span>
+
+                            <h3>College Festivals & Fests</h3>
+
+                            <p>
+                                Plan exciting college festivals, cultural
+                                programmes, freshers' parties and farewell events.
+                            </p>
+
+                            <div class="event-card-meta">
+
+                                <span>📍 Multiple locations</span>
+
+                                <span>Flexible budgets</span>
+
+                            </div>
+
+                            <a href="booking.html?event=college"
+                                class="event-card-button">
+                                Explore College Events →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CORPORATE EVENTS -->
+
+                    <article class="event-card" id="corporate-events"
+                        data-category="corporate"
+                        data-location="chandigarh">
+
+                        <a href="booking.html?event=corporate"
+                            class="event-card-image corporate-event-image"
+                            aria-label="Explore corporate events">
+
+                        </a>
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
+                                CORPORATE EVENTS
+                            </span>
+
+                            <h3>Corporate Gatherings</h3>
+
+                            <p>
+                                Organize meetings, conferences, networking
+                                events and professional celebrations.
+                            </p>
+
+                            <div class="event-card-meta">
+
+                                <span>📍 Multiple locations</span>
+
+                                <span>Flexible budgets</span>
+
+                            </div>
+
+                            <a href="booking.html?event=corporate"
+                                class="event-card-button">
+                                Explore Corporate Options →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ANNIVERSARIES -->
+
+                    <article class="event-card" id="anniversaries"
+                        data-category="anniversary"
+                        data-location="amritsar">
+
+                        <a href="booking.html?event=anniversary"
+                            class="event-card-image anniversary-event-image"
+                            aria-label="Explore anniversary events">
+
+                        </a>
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
+                                ANNIVERSARIES
+                            </span>
+
+                            <h3>Anniversary Celebrations</h3>
+
+                            <p>
+                                Celebrate meaningful milestones with thoughtful
+                                decorations, dining and special experiences.
+                            </p>
+
+                            <div class="event-card-meta">
+
+                                <span>📍 Multiple locations</span>
+
+                                <span>Flexible budgets</span>
+
+                            </div>
+
+                            <a href="booking.html?event=anniversary"
+                                class="event-card-button">
+                                Explore Anniversary Options →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- NO RESULTS MESSAGE -->
+
+                <div class="no-events-message" id="noEventsMessage" hidden>
+
+                    <h3>No matching events found</h3>
+
+                    <p>
+                        Try a different search term, category or location.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EVENT PLANNING STEPS ================= -->
+
+        <section class="event-planning-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        SIMPLE AND CONVENIENT
+                    </p>
+
+                    <h2>
+                        Plan Your Event in 3 Steps
+                    </h2>
+
+                    <p class="section-description">
+                        Get started with a clear approach to event planning.
+                    </p>
+
+                </div>
+
+
+                <div class="planning-steps-grid">
+
+
+                    <article class="planning-step">
+
+                        <div class="step-number">01</div>
+
+                        <h3>Choose Your Event</h3>
+
+                        <p>
+                            Select the occasion you want to celebrate
+                            and explore suitable ideas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="planning-step">
+
+                        <div class="step-number">02</div>
+
+                        <h3>Explore Venues & Services</h3>
+
+                        <p>
+                            Discover venues and services that suit
+                            your requirements and preferences.
+                        </p>
+
+                    </article>
+
+
+                    <article class="planning-step">
+
+                        <div class="step-number">03</div>
+
+                        <h3>Plan Your Budget</h3>
+
+                        <p>
+                            Organize your expected expenses and
+                            prepare for your celebration.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+                <div class="planning-cta">
+
+                    <h3>Ready to start planning?</h3>
+
+                    <p>
+                        Find a venue or organize your event budget.
+                    </p>
+
+                    <div class="planning-cta-actions">
+
+                        <a href="venues.html" class="primary-button">
+                            Explore Venues
+                        </a>
+
+                        <a href="budget.html" class="secondary-dark-button">
+                            Open Budget Planner
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINAL CTA ================= -->
+
+        <section class="final-cta-section">
+
+            <div class="container final-cta-content">
+
+                <h2>
+                    Every Great Memory Starts With a Celebration
+                </h2>
+
+                <p>
+                    Discover your possibilities and make your next event special.
+                </p>
+
+                <a href="venues.html" class="primary-button">
+                    Find Your Perfect Venue
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo footer-logo">
+                        EVENT<span>WALE</span>
+                    </a>
+
+                    <p>
+                        Bringing people, places and celebrations together.
+                        Discover a simpler wayto plan your next special event.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+
+                    <a href="events.html">Explore Events</a>
+
+                    <a href="venues.html">Find Venues</a>
+
+                    <a href="services.html">Our Services</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Plan Your Event</h3>
+
+                    <a href="budget.html">Budget Planner</a>
+
+                    <a href="booking.html">Booking</a>
+
+                    <a href="about.html">About Us</a>
+
+                    <a href="contact.html">Contact Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Your Account</h3>
+
+                    <a href="login.html">Login</a>
+
+                    <a href="signup.html">Create Account</a>
+
+                    <p class="footer-contact">
+                        Email: Add your project email
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 EVENTWALE. All rights reserved.
+                </p>
+
+                <p>
+                    Student Project | Class 12 Information Technology
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+<script type="module" src="auth-nav.js">
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("eventsFilterForm");
+    const searchInput = document.getElementById("eventSearch");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const locationFilter = document.getElementById("eventLocationFilter");
+    const cards = document.querySelectorAll(".event-card");
+    const noResults = document.getElementById("noEventsMessage");
+
+    if (!form) return;
+    // Read filters sent from the Home page
+const params = new URLSearchParams(window.location.search);
+
+const homeType = params.get("type");
+const homeLocation = params.get("location");
+const homeBudget = params.get("budget");
+
+// Apply Home page filters when present
+if (homeType && categoryFilter) {
+    categoryFilter.value = homeType;
+}
+
+if (homeLocation && locationFilter) {
+    locationFilter.value = homeLocation;
+}
+
+    function filterEvents() {
+        const search = searchInput.value.trim().toLowerCase();
+        const category = categoryFilter.value.toLowerCase();
+        const location = locationFilter.value.trim().toLowerCase();
+
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const cardCategory = (card.dataset.category || "").toLowerCase();
+            const cardLocation = (card.dataset.location || "").toLowerCase();
+            const cardText = card.textContent.toLowerCase();
+
+            const matchesSearch = cardText.includes(search);
+            const matchesCategory =
+                category === "all" || cardCategory === category;
+            const matchesLocation =
+                !location || cardLocation.includes(location);
+
+            const matches =
+                matchesSearch && matchesCategory && matchesLocation;
+
+            card.hidden = !matches;
+
+            if (matches) visibleCount++;
+        });
+
+        if (noResults) {
+            noResults.hidden = visibleCount !== 0;
+        }
+    }
+
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        filterEvents();
+    });
+
+    searchInput.addEventListener("input", filterEvents);
+    categoryFilter.addEventListener("change", filterEvents);
+    locationFilter.addEventListener("input", filterEvents);
+
+    filterEvents();
+});
+</script>
+</body>
+
+</html>

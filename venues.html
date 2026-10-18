@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Venues | EVENTWALE</title>
+
+    <meta name="description"
+        content="Discover beautiful wedding venues, banquet halls, gardens and party locations with EVENTWALE.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">EVENT<span>WALE</span></a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="venues.html" class="active">Venues</a>
+            <a href="services.html">Services</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+    <span class="auth-loading">Checking account...</span>
+</div>
+
+    </header>
+
+
+    <!-- VENUES HERO SECTION -->
+    <section class="venues-hero">
+
+        <div class="venues-hero-content">
+
+            <span class="section-tag">FIND YOUR PERFECT PLACE</span>
+
+            <h1>Discover the Perfect Venue for Every Celebration</h1>
+
+            <p>
+                From elegant wedding halls to beautiful outdoor gardens,
+                find a venue that makes your special occasion unforgettable.
+            </p>
+
+            <a href="#venue-collection" class="primary-btn">
+                Explore Venues
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- VENUE SEARCH SECTION -->
+    <section class="venue-search-section">
+
+        <div class="venue-search-heading">
+            <h2>Find Your Ideal Venue</h2>
+
+            <p>
+                Choose your location, venue type and budget to start exploring.
+            </p>
+        </div>
+
+        <form class="venue-search-form" id="venueSearchForm">
+
+            <div class="venue-search-field">
+                <label for="venueLocation">Location</label>
+
+                <input
+                    type="text"
+                    id="venueLocation"
+                    placeholder="e.g. Ludhiana">
+            </div>
+
+            <div class="venue-search-field">
+                <label for="venueType">Venue Type</label>
+
+                <select id="venueType">
+                    <option value="">All Venue Types</option>
+                    <option value="banquet">Banquet Hall</option>
+                    <option value="garden">Garden Venue</option>
+                    <option value="hotel">Hotel Venue</option>
+                    <option value="farmhouse">Farmhouse</option>
+                    <option value="party">Party Hall</option>
+                </select>
+            </div>
+
+            <div class="venue-search-field">
+                <label for="venueBudget">Maximum Budget</label>
+
+                <select id="venueBudget">
+                    <option value="">Any Budget</option>
+                    <option value="25000">Up to ₹25,000</option>
+                    <option value="50000">Up to ₹50,000</option>
+                    <option value="100000">Up to ₹1,00,000</option>
+                    <option value="200000">Up to ₹2,00,000</option>
+                </select>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Search Venues
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- VENUE COLLECTION -->
+    <section class="venue-collection" id="venue-collection">
+
+        <div class="venue-section-heading">
+
+            <span class="section-tag">EXPLORE OUR COLLECTION</span>
+
+            <h2>Beautiful Venues for Every Occasion</h2>
+
+            <p>
+                Explore different spaces and choose the perfect setting
+                for your next celebration.
+            </p>
+
+        </div>
+
+
+        <!-- VENUE CATEGORY LINKS -->
+        <div class="venue-category-links">
+
+            <a href="#all-venues">All Venues</a>
+            <a href="#all-venues">Banquet Halls</a>
+            <a href="#all-venues">Garden Venues</a>
+            <a href="#all-venues">Hotel Venues</a>
+            <a href="#all-venues">Farmhouses</a>
+            <a href="#all-venues">Party Halls</a>
+
+        </div>
+
+
+        <!-- VENUE CARDS -->
+        <div class="venues-grid" id="all-venues">
+
+
+            <!-- VENUE 1 -->
+            <article class="venue-card"
+                data-location="ludhiana"
+                data-type="banquet"
+                data-price="45000">
+
+                <div class="venue-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80"
+                        alt="Elegant banquet hall decorated for a celebration">
+
+                    <span class="venue-badge">POPULAR</span>
+
+                </div>
+
+                <div class="venue-card-content">
+
+                    <span class="venue-type-label">BANQUET HALL</span>
+
+                    <h3>Royal Celebration Hall</h3>
+
+                    <p class="venue-location">📍 Ludhiana, Punjab</p>
+
+                    <p>
+                        An elegant indoor venue for weddings,
+                        receptions and family celebrations.
+                    </p>
+
+                    <div class="venue-card-bottom">
+
+                        <div class="venue-price">
+                            <strong>₹45,000</strong>
+                            <span>Starting price</span>
+                        </div>
+
+                        <a href="venue-details.html" class="venue-details-btn">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VENUE 2 -->
+            <article class="venue-card"
+                data-location="chandigarh"
+                data-type="garden"
+                data-price="60000">
+
+                <div class="venue-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+                        alt="Beautiful outdoor wedding venue">
+
+                    <span class="venue-badge">OUTDOOR</span>
+
+                </div>
+
+                <div class="venue-card-content">
+
+                    <span class="venue-type-label">GARDEN VENUE</span>
+
+                    <h3>Green Garden Venue</h3>
+
+                    <p class="venue-location">📍 Chandigarh</p>
+
+                    <p>
+                        A beautiful outdoor setting surrounded by greenery
+                        for weddings and open-air parties.
+                    </p>
+
+                    <div class="venue-card-bottom">
+
+                        <div class="venue-price">
+                            <strong>₹60,000</strong>
+                            <span>Starting price</span>
+                        </div>
+
+                        <a href="venue-details.html" class="venue-details-btn">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VENUE 3 -->
+            <article class="venue-card"
+                data-location="amritsar"
+                data-type="party"
+                data-price="25000">
+
+                <div class="venue-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80"
+                        alt="Party venue arranged for a special occasion">
+
+                    <span class="venue-badge">GREAT VALUE</span>
+
+                </div>
+
+                <div class="venue-card-content">
+
+                    <span class="venue-type-label">PARTY HALL</span>
+
+                    <h3>Celebration Party Lounge</h3>
+
+                    <p class="venue-location">📍 Amritsar, Punjab</p>
+
+                    <p>
+                        A welcoming space for birthdays, anniversaries
+                        and small family gatherings.
+                    </p>
+
+                    <div class="venue-card-bottom">
+
+                        <div class="venue-price">
+                            <strong>₹25,000</strong>
+                            <span>Starting price</span>
+                        </div>
+
+                        <a href="venue-details.html" class="venue-details-btn">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VENUE 4 -->
+            <article class="venue-card"
+                data-location="ludhiana"
+                data-type="hotel"
+                data-price="85000">
+
+                <div class="venue-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+                        alt="Luxury hotel venue with elegant surroundings">
+
+                </div>
+
+                <div class="venue-card-content">
+
+                    <span class="venue-type-label">HOTEL VENUE</span>
+
+                    <h3>Grand Heritage Hotel</h3>
+
+                    <p class="venue-location">📍 Ludhiana, Punjab</p>
+
+                    <p>
+                        A sophisticated venue for corporate gatherings,
+                        engagement ceremonies and formal celebrations.
+                    </p>
+
+                    <div class="venue-card-bottom">
+
+                        <div class="venue-price">
+                            <strong>₹85,000</strong>
+                            <span>Starting price</span>
+                        </div>
+
+                        <a href="venue-details.html" class="venue-details-btn">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VENUE 5 -->
+            <article class="venue-card"
+                data-location="chandigarh"
+                data-type="farmhouse"
+                data-price="100000">
+
+                <div class="venue-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80"
+                        alt="Outdoor event venue with tables and celebration decorations">
+
+                </div>
+
+                <div class="venue-card-content">
+
+                    <span class="venue-type-label">FARMHOUSE</span>
+
+                    <h3>Serenity Farmhouse</h3>
+
+                    <p class="venue-location">📍 Chandigarh</p>
+
+                    <p>
+                        Enjoy a spacious and peaceful setting for
+                        private celebrations and special events.
+                    </p>
+
+                    <div class="venue-card-bottom">
+
+                        <div class="venue-price">
+                            <strong>₹1,00,000</strong>
+                            <span>Starting price</span>
+                        </div>
+
+                        <a href="venue-details.html" class="venue-details-btn">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VENUE 6 -->
+            <article class="venue-card"
+                data-location="amritsar"
+                data-type="banquet"
+                data-price="50000">
+
+                <div class="venue-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=80"
+                        alt="Wedding reception space with elegant event decorations">
+
+                </div>
+
+                <div class="venue-card-content">
+
+                    <span class="venue-type-label">BANQUET HALL</span>
+
+                    <h3>Royal Orchid Banquet</h3>
+
+                    <p class="venue-location">📍 Amritsar, Punjab</p>
+
+                    <p>
+                        A stylish venue for wedding receptions,
+                        family functions and festive gatherings.
+                    </p>
+
+                    <div class="venue-card-bottom">
+
+                        <div class="venue-price">
+                            <strong>₹50,000</strong>
+                            <span>Starting price</span>
+                        </div>
+
+                        <a href="venue-details.html" class="venue-details-btn">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- NO RESULTS MESSAGE -->
+        <div class="venue-no-results" id="venueNoResults" hidden>
+
+            <h3>No matching venues found</h3>
+
+            <p>
+                Try changing your location, venue type or budget.
+            </p>
+
+        </div>
+
+        <p class="venue-demo-note">
+            Note: Venue names, locations and prices on this school project
+            are illustrative sample data, not verified commercial listings.
+        </p>
+
+    </section>
+
+
+    <!-- WHY CHOOSE OUR VENUES -->
+    <section class="venue-benefits">
+
+        <div class="venue-benefits-heading">
+
+            <span class="section-tag">THE EVENTWALE ADVANTAGE</span>
+
+            <h2>Why Find Your Venue With Us?</h2>
+
+        </div>
+
+        <div class="venue-benefits-grid">
+
+            <article class="venue-benefit-card">
+
+                <div class="benefit-icon">📍</div>
+
+                <h3>Multiple Locations</h3>
+
+                <p>
+                    Explore venue options in different cities
+                    to find a suitable location for your event.
+                </p>
+
+            </article>
+
+            <article class="venue-benefit-card">
+
+                <div class="benefit-icon">💰</div>
+
+                <h3>Budget Friendly</h3>
+
+                <p>
+                    Compare sample starting prices and choose
+                    an option that fits your planned budget.
+                </p>
+
+            </article>
+
+            <article class="venue-benefit-card">
+
+                <div class="benefit-icon">🎉</div>
+
+                <h3>Different Occasions</h3>
+
+                <p>
+                    Discover spaces for weddings, birthdays,
+                    corporate gatherings and family celebrations.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- VENUE CALL TO ACTION -->
+    <section class="venue-cta">
+
+        <div class="venue-cta-content">
+
+            <h2>Your Perfect Celebration Starts Here</h2>
+
+            <p>
+                Explore our event services and start planning
+                a memorable celebration with EVENTWALE.
+            </p>
+
+            <a href="services.html" class="primary-btn">
+                Explore Our Services
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    EVENT<span>WALE</span>
+                </a>
+
+                <p>
+                    Bringing your celebrations to life with
+                    thoughtful planning and unforgettable moments.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="venues.html">Venues</a>
+                <a href="services.html">Services</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Planning</h3>
+
+                <a href="budget.html">Budget Planner</a>
+                <a href="booking.html">Book an Event</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Account</h3>
+
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 EVENTWALE. Created for a school project.
+            </p>
+
+        </div>
+
+    </footer>
+<script type="module" src="auth-nav.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("venueSearchForm");
+    const locationInput = document.getElementById("venueLocation");
+    const typeFilter = document.getElementById("venueType");
+    const budgetFilter = document.getElementById("venueBudget");
+    const cards = document.querySelectorAll(".venue-card");
+    const message = document.getElementById("venueNoResults");
+
+    if (!form || !locationInput || !typeFilter || !budgetFilter || !message) {
+        console.error("Venue filter: Required HTML element missing.");
+        return;
+    }
+
+    function filterVenues() {
+        const location = locationInput.value.trim().toLowerCase();
+        const type = typeFilter.value.toLowerCase();
+
+        const budget = budgetFilter.value === ""
+            ? Infinity
+            : Number(budgetFilter.value);
+
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const cardLocation = (card.dataset.location || "").toLowerCase();
+            const cardType = (card.dataset.type || "").toLowerCase();
+            const cardPrice = Number(card.dataset.price) || 0;
+
+            const matchesLocation =
+                !location || cardLocation.includes(location);
+
+            const matchesType =
+                !type || cardType === type;
+
+            const matchesBudget = cardPrice <= budget;
+
+            const matches =
+                matchesLocation && matchesType && matchesBudget;
+
+            card.hidden = !matches;
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        message.hidden = visibleCount > 0;
+    }
+
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        filterVenues();
+    });
+
+    locationInput.addEventListener("input", filterVenues);
+    typeFilter.addEventListener("change", filterVenues);
+    budgetFilter.addEventListener("change", filterVenues);
+
+    filterVenues();
+});
+</script>
+</body>
+
+</html>

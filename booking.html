@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Event | EVENTWALE</title>
+
+    <meta name="description"
+        content="Submit your event booking enquiry with EVENTWALE and share your celebration requirements.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">EVENT<span>WALE</span></a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="venues.html">Venues</a>
+            <a href="services.html">Services</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+    <span class="auth-loading">Checking account...</span>
+</div>
+    </header>
+
+
+    <!-- BOOKING HERO -->
+    <section class="booking-hero">
+
+        <div class="booking-hero-content">
+
+            <span class="section-tag">LET'S MAKE IT MEMORABLE</span>
+
+            <h1>Start Planning Your Perfect Event</h1>
+
+            <p>
+                Tell us about your celebration, your preferences
+                and your budget. Begin organizing your special occasion
+                with EVENTWALE.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING INTRODUCTION -->
+    <section class="booking-intro">
+
+        <span class="section-tag">YOUR EVENT STARTS HERE</span>
+
+        <h2>Share Your Event Requirements</h2>
+
+        <p>
+            Complete the enquiry form below with the details you know.
+            You can update your plans as your event takes shape.
+        </p>
+
+    </section>
+
+
+    <!-- BOOKING FORM SECTION -->
+    <section class="booking-form-section">
+
+        <div class="booking-form-container">
+
+            <div class="booking-form-heading">
+
+                <h2>Event Booking Enquiry</h2>
+
+                <p>Fields marked with * are required.</p>
+
+            </div>
+
+
+            <form id="eventBookingForm" class="event-booking-form">
+
+                <!-- SECTION 1: PERSONAL DETAILS -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">01</span>
+
+                        <div>
+                            <h3>Your Details</h3>
+                            <p>Tell us how to identify and contact you.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName"
+                                name="customerName"
+                                placeholder="Enter your full name"
+                                autocomplete="name" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="customerEmail">Email Address *</label>
+                            <input type="email" id="customerEmail"
+                                name="customerEmail"
+                                placeholder="example@email.com"
+                                autocomplete="email" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone"
+                                name="customerPhone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="customerCity">Your City *</label>
+                            <input type="text" id="customerCity"
+                                name="customerCity"
+                                placeholder="e.g. Ludhiana"
+                                autocomplete="address-level2" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 2: EVENT DETAILS -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">02</span>
+
+                        <div>
+                            <h3>Event Details</h3>
+                            <p>Share the basic information about your event.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="eventName">Event Name *</label>
+                            <input type="text" id="eventName"
+                                name="eventName"
+                                placeholder="e.g. My Birthday Celebration"
+                                required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventType">Event Type *</label>
+
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="engagement">Engagement</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="college">College Event</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="family">Family Function</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventDate">Preferred Event Date *</label>
+                            <input type="date" id="eventDate"
+                                name="eventDate" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventTime">Preferred Time</label>
+
+                            <select id="eventTime" name="eventTime">
+                                <option value="">Select Time</option>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="guestCount">
+                                Expected Number of Guests *
+                            </label>
+
+                            <input type="number" id="guestCount"
+                                name="guestCount" min="1"
+                                placeholder="e.g. 150" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventCity">Event Location *</label>
+                            <input type="text" id="eventCity"
+                                name="eventCity"
+                                placeholder="Where will the event take place?"
+                                required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 3: VENUE PREFERENCES -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">03</span>
+
+                        <div>
+                            <h3>Venue Preferences</h3>
+                            <p>Tell us what type of venue you prefer.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="venuePreference">
+                                Preferred Venue Type
+                            </label>
+
+                            <select id="venuePreference" name="venuePreference">
+                                <option value="">Not Decided Yet</option>
+                                <option value="banquet">Banquet Hall</option>
+                                <option value="garden">Garden Venue</option>
+                                <option value="hotel">Hotel Venue</option>
+                                <option value="farmhouse">Farmhouse</option>
+                                <option value="party">Party Hall</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="preferredVenue">
+                                Preferred Venue Name
+                            </label>
+
+                            <select id="preferredVenue" name="preferredVenue">
+                                <option value="">No Preference</option>
+                                <option value="royal-hall">
+                                    Royal Celebration Hall
+                                </option>
+                                <option value="green-garden">
+                                    Green Garden Venue
+                                </option>
+                                <option value="party-lounge">
+                                    Celebration Party Lounge
+                                </option>
+                                <option value="grand-hotel">
+                                    Grand Heritage Hotel
+                                </option>
+                                <option value="serenity-farmhouse">
+                                    Serenity Farmhouse
+                                </option>
+                                <option value="royal-orchid">
+                                    Royal Orchid Banquet
+                                </option>
+                                <option value="other">Other / Not Listed</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 4: BUDGET -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">04</span>
+
+                        <div>
+                            <h3>Your Budget</h3>
+                            <p>Set an estimated spending range for your event.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="eventBudget">
+                                Estimated Total Budget *
+                            </label>
+
+                            <select id="eventBudget" name="eventBudget" required>
+                                <option value="">Select Your Budget</option>
+                                <option value="under-25000">Under ₹25,000</option>
+                                <option value="25000-50000">
+                                    ₹25,000 – ₹50,000
+                                </option>
+                                <option value="50000-100000">
+                                    ₹50,000 – ₹1,00,000
+                                </option>
+                                <option value="100000-200000">
+                                    ₹1,00,000 – ₹2,00,000
+                                </option>
+                                <option value="above-200000">
+                                    Above ₹2,00,000
+                                </option>
+                                <option value="undecided">Not Decided Yet</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="servicePreference">
+                                Preferred Service Package
+                            </label>
+
+                            <select id="servicePreference"
+                                name="servicePreference">
+                                <option value="">Choose Services Later</option>
+                                <option value="venue-only">Venue Only</option>
+                                <option value="decoration-catering">
+                                    Decoration &amp; Catering
+                                </option>
+                                <option value="photo-video">
+                                    Photography &amp; Videography
+                                </option>
+                                <option value="multiple-services">
+                                    Multiple Event Services
+                                </option>
+                                <option value="full-planning">
+                                    Complete Event Planning
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 5: ADDITIONAL REQUIREMENTS -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">05</span>
+
+                        <div>
+                            <h3>Additional Requirements</h3>
+                            <p>Tell us about any special preferences or ideas.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="eventRequirements">
+                            Describe Your Requirements
+                        </label>
+
+                        <textarea id="eventRequirements"
+                            name="eventRequirements"
+                            rows="6"
+                            placeholder="Describe your event theme, decoration ideas, food preferences or other requirements..."></textarea>
+                    </div>
+
+                    <div class="booking-field booking-checkbox-field">
+
+                        <input type="checkbox" id="termsAgreement"
+                            name="termsAgreement" required>
+
+                        <label for="termsAgreement">
+                            I confirm that the information provided is accurate
+                            and agree to be contacted regarding this enquiry. *
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM BUTTONS -->
+                <div class="booking-form-actions">
+
+                    <button type="submit" class="primary-btn">
+                        Submit Booking Enquiry
+                    </button>
+
+                    <button type="reset" class="booking-reset-btn">
+                        Clear Form
+                    </button>
+
+                </div>
+
+                <p class="booking-form-note">
+                    This is a demonstration booking form for the EVENTWALE
+                    school project. Submitting it will not create a confirmed
+                    reservation. Form processing will be added later.
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT HAPPENS NEXT -->
+    <section class="booking-next-steps">
+
+        <div class="booking-section-heading">
+
+            <span class="section-tag">SIMPLE EVENT PLANNING</span>
+
+            <h2>What Happens Next?</h2>
+
+            <p>Here's how the enquiry process is designed to work.</p>
+
+        </div>
+
+        <div class="booking-next-grid">
+
+            <article class="booking-next-card">
+                <span class="process-number">01</span>
+
+                <h3>Share Your Details</h3>
+
+                <p>
+                    Complete the form with your event details,
+                    requirements and estimated budget.
+                </p>
+            </article>
+
+            <article class="booking-next-card">
+                <span class="process-number">02</span>
+
+                <h3>Review Your Requirements</h3>
+
+                <p>
+                    Review your selected event type, preferred venue,
+                    guest count and budget before proceeding.
+                </p>
+            </article>
+
+            <article class="booking-next-card">
+                <span class="process-number">03</span>
+
+                <h3>Plan Your Celebration</h3>
+
+                <p>
+                    Use your submitted details as a starting point
+                    for organizing a memorable event.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING CTA -->
+    <section class="booking-cta">
+
+        <div class="booking-cta-content">
+
+            <span class="section-tag">YOUR MOMENT, YOUR WAY</span>
+
+            <h2>Every Great Event Starts with an Idea</h2>
+
+            <p>
+                From intimate gatherings to grand celebrations,
+                EVENTWALE helps you bring your event vision to life.
+            </p>
+
+            <a href="events.html" class="primary-btn">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    EVENT<span>WALE</span>
+                </a>
+
+                <p>
+                    Making every celebration special with thoughtful
+                    planning, beautiful venues and memorable experiences.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="venues.html">Venues</a>
+                <a href="services.html">Services</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Plan Your Event</h3>
+
+                <a href="booking.html">Book an Event</a>
+                <a href="budget.html">Budget Planner</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Account</h3>
+
+                <a href="login.html">Login</a>
+                <a href="signup.html">Create Account</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 EVENTWALE. All rights reserved.
+            </p>
+
+            <p>Designed for celebrations that matter.</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BASIC DEMONSTRATION FORM BEHAVIOUR -->
+    <script>
+        const bookingForm = document.getElementById("eventBookingForm");
+        const eventDateInput = document.getElementById("eventDate");
+
+        // Prevent selecting a past event date.
+      const today = new Date();
+        const localToday = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        eventDateInput.min = localToday;
+
+        // Demonstration only: no booking is sent or saved.
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!bookingForm.checkValidity()) {
+                bookingForm.reportValidity();
+                return;
+            }
+
+            alert(
+                "Thank you, " +
+                document.getElementById("customerName").value.trim() +
+                "! Your EVENTWALE booking enquiry has been completed for this demonstration. No real reservation has been created."
+            );
+
+            bookingForm.reset();
+            eventDateInput.min = localToday;
+        });
+    </script>
+<script type="module" src="auth-nav.js"></script>
+</body>
+
+</html>
