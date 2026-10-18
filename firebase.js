@@ -11,9 +11,9 @@ import {
 // Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDp9W5T_wx6e8gbMbC0qw6u_zNpaGGRtoE",
-    authDomain: "eventwale-9c70f.firebaseapp.com",
-    projectId: "eventwale-9c70f",
-    storageBucket: "eventwale-9c70f.firebasestorage.app",
+    authDomain: "rbsbevents-9c70f.firebaseapp.com",
+    projectId: "rbsbevents-9c70f",
+    storageBucket: "rbsbevents-9c70f.firebasestorage.app",
     messagingSenderId: "429719297904",
     appId: "1:429719297904:web:66570ca02d3b8f7594b9b5",
     measurementId: "G-W9GGFWGY9X"
@@ -26,7 +26,7 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getDatabase(
     app,
-    "https://eventwale-9c70f-default-rtdb.asia-southeast1.firebasedatabase.app"
+    "https://rbsbevents-9c70f-default-rtdb.asia-southeast1.firebasedatabase.app"
 );
 
 // Google sign-in provider
@@ -36,4 +36,4 @@ googleProvider.setCustomParameters({
     prompt: "select_account"
 });
 
-console.log("EVENTWALE Firebase initialized successfully!");
+console.log("RBSB Events Firebase initialized successfully!");

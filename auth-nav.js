@@ -6,7 +6,7 @@ import {
 }
 from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
 
-console.log("EVENTWALE auth-nav.js loaded");
+console.log("RBSB Events auth-nav.js loaded");
 console.log(
     "Header found:",
     document.querySelector(".header-actions")
@@ -50,7 +50,7 @@ function showUserNavigation(user) {
     const email = user.email || "";
 
     const savedPicture = localStorage.getItem(
-        "eventwale_profile_picture_" + user.uid
+        "RBSBEVENTS_profile_picture_" + user.uid
     );
 
     const profilePicture =

@@ -1,5 +1,5 @@
 // =====================================
-// EVENTWALE ADMIN PANEL - FIXED
+// RBSB Events ADMIN PANEL - FIXED
 // Navigation + Theme + Modal + Mobile
 // =====================================
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         services: {
             title: "Manage Services",
-            subtitle: "Manage services offered on EVENTWALE."
+            subtitle: "Manage services offered on RBSB Events."
         },
         locations: {
             title: "Locations",
@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toast.textContent = message;
         toast.classList.add("show");
 
-        clearTimeout(window.eventwaleToastTimer);
+        clearTimeout(window.RBSBEVENTSToastTimer);
 
-        window.eventwaleToastTimer = setTimeout(function () {
+        window.RBSBEVENTSToastTimer = setTimeout(function () {
             toast.classList.remove("show");
         }, 2500);
     }
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load saved theme
     try {
-        const savedTheme = localStorage.getItem("eventwaleAdminTheme");
+        const savedTheme = localStorage.getItem("rbsbAdminTheme");
 
         applyTheme(savedTheme ? JSON.parse(savedTheme) : themes.navy);
     } catch (error) {
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveThemeBtn.addEventListener("click", function () {
             try {
                 localStorage.setItem(
-                    "eventwaleAdminTheme",
+                    "rbsbAdminTheme",
                     JSON.stringify(getCurrentTheme())
                 );
 
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resetThemeBtn.addEventListener("click", function () {
             applyTheme(themes.navy);
 
-            localStorage.removeItem("eventwaleAdminTheme");
+            localStorage.removeItem("rbsbAdminTheme");
 
             if (themeMessage) {
                 themeMessage.textContent = "Default theme restored.";
@@ -412,5 +412,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    console.log("EVENTWALE admin panel initialized.");
+    console.log("RBSB Events admin panel initialized.");
 });
