@@ -307,22 +307,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Reset theme
-    const resetThemeBtn = document.getElementById("resetThemeBtn");
+// RESET TO DEFAULT THEME
+const resetThemeBtn = document.getElementById("resetThemeBtn");
 
-    if (resetThemeBtn) {
-        resetThemeBtn.addEventListener("click", function () {
+if (resetThemeBtn) {
+    resetThemeBtn.addEventListener("click", function () {
+        try {
             applyTheme(themes.navy);
 
-            localStorage.removeItem("rbsbAdminTheme");
+            localStorage.setItem(
+                "rbsbAdminTheme",
+                JSON.stringify(themes.navy)
+            );
 
             if (themeMessage) {
-                themeMessage.textContent = "Default theme restored.";
+                themeMessage.textContent =
+                    "Default theme saved successfully!";
             }
 
-            showToast("Default theme restored!");
-        });
-    }
+            showToast("Default theme restored and saved!");
+
+        } catch (error) {
+            console.error("Theme reset error:", error);
+            showToast("Could not reset theme.");
+        }
+    });
+}
 
     // =====================================
     // ADD CONTENT MODAL
