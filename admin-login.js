@@ -1,7 +1,7 @@
 // RBSB ORG ADMIN LOGIN
 
 const ADMIN_EMAIL = ["karxnsharma211@gmail.com", "aizenkun430@gmail.com","rbsborg@gmail.com"];
-const ADMIN_PASSWORD = "RBSBORG@!234S";
+const ADMIN_PASSWORD = "karan@1234";
 const loginForm = document.getElementById("adminLoginForm");
 const emailInput = document.getElementById("adminEmail");
 const passwordInput = document.getElementById("adminPassword");
