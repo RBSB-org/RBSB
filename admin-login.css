@@ -1,0 +1,169 @@
+:root {
+  --navy: #14243A;
+  --gold: #C5A46D;
+  --ivory: #FAF8F3;
+  --text: #273444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.brand h1 {
+  color: var(--navy);
+  font-size: 34px;
+  letter-spacing: 3px;
+}
+
+.brand h1 span {
+  color: var(--gold);
+}
+
+.brand p {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #6b7280;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 410px;
+  padding: 34px 26px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(20, 36, 58, 0.10);
+  border: 1px solid #eee8dd;
+}
+
+.admin-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  background: var(--navy);
+  color: var(--gold);
+  border-radius: 50%;
+  font-size: 32px;
+}
+
+.login-card h2 {
+  text-align: center;
+  color: var(--navy);
+  font-size: 25px;
+}
+
+.subtitle {
+  margin: 10px 0 28px;
+  text-align: center;
+  color: #77808b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  margin: 17px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce0e5;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 164, 109, 0.15);
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: var(--navy);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #203b5c;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.back-link {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: #596678;
+  font-size: 13px;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 11px;
+  color: #858b94;
+}
+
+@media (max-width: 360px) {
+  .login-card {
+    padding: 28px 19px;
+  }
+
+  .brand h1 {
+    font-size: 29px;
+  }
+}

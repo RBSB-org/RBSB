@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | RBSB EVENTS</title>
+
+    <meta name="description"
+        content="Create an RBSB EVENTS account to explore event ideas, venues and event-planning features.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">RBSB<span>EVENTS</span></a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="venues.html">Venues</a>
+            <a href="services.html">Services</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+       <!-- <div class="header-actions">
+            <a href="login.html" class="login-link">Login</a>
+            <a href="signup.html" class="signup-btn active">Sign Up</a>
+        </div>
+-->
+    </header>
+
+
+    <!-- SIGNUP MAIN SECTION -->
+    <main class="auth-main">
+
+        <section class="auth-container signup-container">
+
+            <!-- LEFT WELCOME PANEL -->
+            <div class="auth-welcome-panel signup-welcome-panel">
+
+                <span class="section-tag">JOIN RBSB EVENTS</span>
+
+                <h1>Every Great Celebration Starts Somewhere</h1>
+
+                <p>
+                    Create your account and start exploring ideas,
+                    venues and planning tools for your next special occasion.
+                </p>
+
+                <div class="auth-feature-list">
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Discover exciting event ideas</p>
+                    </div>
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Explore venues and event services</p>
+                    </div>
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Plan your celebration budget</p>
+                    </div>
+
+                    <div class="auth-feature">
+                        <span class="auth-feature-icon">✦</span>
+                        <p>Organize your event requirements</p>
+                    </div>
+
+                </div>
+
+                <div class="auth-decoration">
+                    <span>✧</span>
+                    <span>✦</span>
+                    <span>✧</span>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIGNUP FORM -->
+            <div class="auth-form-panel signup-form-panel">
+
+                <div class="auth-form-heading">
+
+                    <a href="index.html" class="auth-logo">
+                        RBSB<span>EVENTS</span>
+                    </a>
+
+                    <h2>Create Your Account</h2>
+
+                    <p>
+                        Enter your details to get started.
+                    </p>
+
+                </div>
+
+
+                <form id="signupForm" class="auth-form">
+
+                    <!-- FULL NAME -->
+                    <div class="auth-field">
+
+                        <label for="signupName">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="signupName"
+                            name="signupName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="auth-field">
+
+                        <label for="signupEmail">
+                            Email Address *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            name="signupEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="auth-field">
+
+                        <label for="signupPhone">
+                            Phone Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="signupPhone"
+                            name="signupPhone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            inputmode="tel"
+                            required>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="auth-field">
+
+                        <label for="signupPassword">
+                            Create Password *
+                        </label>
+
+                        <div class="password-input-wrapper">
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                name="signupPassword"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-password-target="signupPassword"
+                                aria-label="Show password"
+                                aria-pressed="false">
+                                Show
+                            </button>
+
+                        </div>
+
+                        <small class="auth-field-hint">
+                            Use at least 8 characters.
+                        </small>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="auth-field">
+
+                        <label for="confirmPassword">
+                            Confirm Password *
+                        </label>
+
+                        <div class="password-input-wrapper">
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-password-target="confirmPassword"
+                                aria-label="Show password"
+                                aria-pressed="false">
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS AND CONDITIONS -->
+                    <div class="auth-terms-field">
+
+                        <input
+                            type="checkbox"
+                            id="signupTerms"
+                            name="signupTerms"
+                            required>
+
+                        <label for="signupTerms">
+                            I agree to the project demonstration's
+                            <a href="#terms-information">terms and conditions</a>.
+                        </label>
+
+                    </div>
+
+
+                    <!-- SIGNUP BUTTON -->
+                    <button type="submit" class="primary-btn auth-submit-btn">
+                        Create Account
+                    </button>
+
+
+                    <!-- FORM MESSAGE -->
+                    <p
+                        id="signupMessage"
+                        class="auth-message"
+                        role="status"
+                        aria-live="polite">
+                    </p>
+
+
+                    <!-- LOGIN LINK -->
+                    <div class="auth-switch">
+
+                        <p>
+                            Already have an account?
+                            <a href="login.html">Login Here</a>
+                        </p>
+
+                    </div>
+
+                </form>
+<div class="google-login-section">
+    <p>Or create an account with</p>
+
+    <button type="button" id="googleSignupBtn" class="google-login-btn">
+        <img
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            alt=""
+            width="20"
+            height="20">
+        Continue with Google
+    </button>
+</div>
+
+                <!-- TERMS INFORMATION -->
+              <!--  <div class="auth-demo-note" id="terms-information">
+
+                    <p>
+                        <strong>Project Notice:</strong>
+                        This is a student-project signup page.
+                        Account creation and secure storage are not enabled yet.
+                        Do not enter real passwords or sensitive personal details
+                        while testing this demonstration.
+                    </p>
+
+                </div>
+
+-->
+<!-- TERMS INFORMATION -->
+<div class="auth-demo-note" id="terms-information">
+    <p>
+        <strong>Project Notice:</strong>
+        RBSB EVENTS uses Firebase Authentication for account registration.
+        Phone numbers entered here are not verified by OTP.
+        Use an account you control when testing.
+    </p>
+</div>
+                <a href="index.html" class="back-home-link">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 RBSB EVENTS. Created as a student web-development project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+<script type="module">
+    import { auth, googleProvider } from "./firebase.js";
+
+    import {
+        createUserWithEmailAndPassword,
+        updateProfile,
+        sendEmailVerification,
+        signInWithPopup
+    } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+
+    const signupForm = document.getElementById("signupForm");
+    const signupMessage = document.getElementById("signupMessage");
+    const googleSignupBtn = document.getElementById("googleSignupBtn");
+
+    function showMessage(message, isError = true) {
+        signupMessage.textContent = message;
+        signupMessage.style.color = isError ? "#c0392b" : "#16803c";
+    }
+
+    // Email/password signup
+    signupForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!signupForm.checkValidity()) {
+            signupForm.reportValidity();
+            return;
+        }
+
+        const name = document.getElementById("signupName").value.trim();
+        const email = document.getElementById("signupEmail").value.trim();
+        const phone = document.getElementById("signupPhone").value.trim();
+        const password = document.getElementById("signupPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const termsAccepted = document.getElementById("signupTerms").checked;
+
+        if (name.length < 2) {
+            showMessage("Please enter your full name.");
+            return;
+        }
+
+        if (!phone) {
+            showMessage("Please enter your phone number.");
+            return;
+        }
+
+        if (password.length < 8) {
+            showMessage("Your password must contain at least 8 characters.");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            showMessage("Your passwords do not match.");
+            return;
+        }
+
+        if (!termsAccepted) {
+            showMessage("Please accept the terms before continuing.");
+            return;
+        }
+
+        const submitButton = signupForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        showMessage("Creating your RBSB EVENTS account...", false);
+
+        let createdUser = null;
+
+        try {
+            const credential = await createUserWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
+
+            createdUser = credential.user;
+
+            await updateProfile(createdUser, {
+                displayName: name
+            });
+
+            await sendEmailVerification(createdUser);
+
+            showMessage(
+                "Account created! Check your email for the verification link.",
+                false
+            );
+
+            signupForm.reset();
+
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 2500);
+
+        } catch (error) {
+            console.error("Signup error:", error);
+
+            const messages = {
+                "auth/email-already-in-use": "This email already has an account. Please log in.",
+                "auth/invalid-email": "Please enter a valid email address.",
+                "auth/weak-password": "Please choose a stronger password.",
+                "auth/operation-not-allowed": "Email/password signup is not enabled in Firebase.",
+                "auth/too-many-requests": "Too many attempts. Please try again later."
+            };
+
+            if (createdUser) {
+                showMessage(
+                    "Your account was created, but email verification could not be sent. Try logging in and requesting verification again."
+                );
+            } else {
+                showMessage(
+                    messages[error.code] ||
+                    "We couldn't create your account. Please try again."
+                );
+            }
+
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+
+  // Google signup
+googleSignupBtn.addEventListener("click", async () => {
+    googleSignupBtn.disabled = true;
+    showMessage("Connecting to Google...", false);
+
+    try {
+        const result = await signInWithPopup(auth, googleProvider);
+
+        const user = result.user;
+
+        console.log("Google sign-in successful:", user.uid);
+
+        showMessage(
+            "Google sign-in successful! Welcome to RBSB EVENTS.",
+            false
+        );
+
+        window.location.replace("index.html");
+
+    } catch (error) {
+        console.error("Google signup error:", error.code, error.message);
+
+        const messages = {
+            "auth/popup-closed-by-user":
+                "Google sign-in was cancelled. Please try again.",
+
+            "auth/unauthorized-domain":
+                "This website domain is not authorized in Firebase.",
+
+            "auth/popup-blocked":
+                "Your browser blocked the Google sign-in window.",
+
+            "auth/cancelled-popup-request":
+                "A Google sign-in window is already open. Please try again.",
+
+            "auth/operation-not-allowed":
+                "Google sign-in is not enabled in Firebase.",
+
+            "auth/network-request-failed":
+                "Network error. Check your internet connection and try again.",
+
+            "auth/account-exists-with-different-credential":
+                "An account already exists with this email using another sign-in method. Try logging in with that method."
+        };
+
+        showMessage(
+            messages[error.code] ||
+            `Google sign-in failed (${error.code || "unknown error"}). Please try again.`
+        );
+
+    } finally {
+        googleSignupBtn.disabled = false;
+    }
+});
+
+    // Show/hide password buttons
+    document.querySelectorAll(".toggle-password").forEach((button) => {
+        button.addEventListener("click", () => {
+            const input = document.getElementById(
+                button.dataset.passwordTarget
+            );
+
+            if (!input) return;
+
+            const showing = input.type === "text";
+            input.type = showing ? "password" : "text";
+            button.textContent = showing ? "Show" : "Hide";
+            button.setAttribute("aria-pressed", String(!showing));
+            button.setAttribute(
+                "aria-label",
+                showing ? "Show password" : "Hide password"
+            );
+        });
+    });
+</script>
+<!-- RBSB EVENTS GLOBAL THEME LOADER -->
+<script>
+(function () {
+    const THEME_KEY = "rbsbAdminTheme";
+
+    function loadRBSBTheme() {
+        let savedTheme;
+
+        try {
+            savedTheme = localStorage.getItem(THEME_KEY);
+        } catch (error) {
+            console.error("RBSB theme storage unavailable:", error);
+            return;
+        }
+
+        if (!savedTheme) return;
+
+        try {
+            const theme = JSON.parse(savedTheme);
+            const root = document.documentElement;
+
+            if (theme.primary) {
+                root.style.setProperty("--primary", theme.primary);
+                root.style.setProperty("--primary-color", theme.primary);
+                root.style.setProperty("--navy", theme.primary);
+                root.style.setProperty("--navy-light", theme.primary);
+            }
+
+            if (theme.accent) {
+                root.style.setProperty("--accent", theme.accent);
+                root.style.setProperty("--accent-color", theme.accent);
+                root.style.setProperty("--gold", theme.accent);
+                root.style.setProperty("--gold-light", theme.accent);
+            }
+
+            if (theme.background) {
+                root.style.setProperty("--page-bg", theme.background);
+                root.style.setProperty("--background-color", theme.background);
+                root.style.setProperty("--ivory", theme.background);
+            }
+
+        } catch (error) {
+            console.error("Could not load RBSB theme:", error);
+        }
+    }
+
+    loadRBSBTheme();
+})();
+</script>
+<script src="theme-mode.js"></script>
+</body>
+</html>
