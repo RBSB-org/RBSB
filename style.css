@@ -6248,3 +6248,131 @@ select:focus-visible {
         transform: rotate(360deg);
     }
 }
+/* =====================================
+   RBSB EVENTS — DARK / LIGHT MODE
+===================================== */
+
+/* Smooth theme transition */
+body,
+header,
+nav,
+footer,
+section,
+article,
+.card,
+.panel,
+input,
+select,
+textarea,
+button {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* DARK MODE */
+html[data-mode="dark"] {
+    color-scheme: dark;
+
+    --ivory: #111827;
+    --white: #1F2937;
+    --text: #F3F4F6;
+    --muted: #B6C0CE;
+    --border: #374151;
+
+    --navy: #0B1220;
+    --navy-light: #1F2937;
+
+    --gold-light: #4B4030;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Page background and text */
+html[data-mode="dark"] body {
+    background-color: var(--ivory);
+    color: var(--text);
+}
+
+/* Common cards and content surfaces */
+html[data-mode="dark"] .card,
+html[data-mode="dark"] .event-card,
+html[data-mode="dark"] .venue-card,
+html[data-mode="dark"] .service-card,
+html[data-mode="dark"] .panel,
+html[data-mode="dark"] .stat-card,
+html[data-mode="dark"] .booking-card,
+html[data-mode="dark"] .form-card,
+html[data-mode="dark"] .login-card,
+html[data-mode="dark"] .profile-card {
+    background-color: var(--white);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+/* Inputs */
+html[data-mode="dark"] input,
+html[data-mode="dark"] select,
+html[data-mode="dark"] textarea {
+    background-color: #1F2937;
+    color: #F3F4F6;
+    border-color: #4B5563;
+}
+
+html[data-mode="dark"] input::placeholder,
+html[data-mode="dark"] textarea::placeholder {
+    color: #9CA3AF;
+}
+
+/* Tables */
+html[data-mode="dark"] table th,
+html[data-mode="dark"] table td {
+    border-color: var(--border);
+}
+
+html[data-mode="dark"] table th {
+    background-color: #1F2937;
+    color: #F3F4F6;
+}
+
+/* Round Dark / Light Mode Button */
+.mode-toggle {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    padding: 0 !important;
+
+    border: 2px solid #000000 !important;
+    border-radius: 50% !important;
+
+    background: #FFFFFF !important;
+    color: #000000 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 21px !important;
+    cursor: pointer !important;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18) !important;
+    transition: all 0.25s ease !important;
+}
+
+/* Dark mode: black round button */
+html[data-mode="dark"] .mode-toggle {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #000000 !important;
+}
+
+/* Icon visibility */
+.mode-toggle span {
+    display: none !important;
+}
+
+/* Tap effect */
+.mode-toggle:active {
+    transform: scale(0.92);
+}
