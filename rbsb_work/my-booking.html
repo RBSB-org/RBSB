@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings | EVENTWALE</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            background: #151b30;
+            border-bottom: 1px solid #303954;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .logo {
+            color: #f5c76b;
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #f5c76b;
+            padding: 10px 14px;
+            border-radius: 8px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .heading {
+            margin-bottom: 25px;
+        }
+
+        .heading h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            color: #b8c0d8;
+            line-height: 1.6;
+        }
+
+        #message {
+            padding: 16px;
+            margin-bottom: 20px;
+            background: #151b30;
+            border-radius: 10px;
+            color: #d5d9e7;
+            line-height: 1.6;
+        }
+
+        .booking-list {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 280px), 1fr)
+            );
+            gap: 20px;
+        }
+
+        .booking-card {
+            background: #151b30;
+            border: 1px solid #303954;
+            border-radius: 14px;
+            padding: 22px;
+            min-width: 0;
+        }
+
+        .booking-card h2 {
+            font-size: 21px;
+            color: #f5c76b;
+            margin-bottom: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .detail {
+            margin: 12px 0;
+            color: #d5d9e7;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 8px;
+            background: #413619;
+            color: #ffdb78;
+        }
+
+        .status.approved {
+            background: #153e2c;
+            color: #7df0ad;
+        }
+
+        .status.rejected {
+            background: #4b2027;
+            color: #ff9aa5;
+        }
+
+        .booking-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .booking-actions button {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .edit-booking-button {
+            background: #f5c76b;
+            color: #111827;
+        }
+
+        .edit-booking-button:hover {
+            background: #ffd98a;
+        }
+
+        .delete-booking-button {
+            background: #702832;
+            color: #ffffff;
+        }
+
+        .delete-booking-button:hover {
+            background: #963744;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .edit-booking-form {
+            margin-top: 20px;
+            padding: 18px;
+            background: #0b1020;
+            border: 1px solid #303954;
+            border-radius: 12px;
+        }
+
+        .edit-booking-form h3 {
+            color: #f5c76b;
+            margin-bottom: 10px;
+        }
+
+        .edit-booking-form label {
+            display: block;
+            margin-top: 14px;
+            color: #d5d9e7;
+            font-size: 14px;
+        }
+
+        .edit-booking-form input,
+        .edit-booking-form select,
+        .edit-booking-form textarea {
+            width: 100%;
+            margin-top: 7px;
+            padding: 11px;
+            border: 1px solid #46516e;
+            border-radius: 7px;
+            background: #151b30;
+            color: white;
+            font: inherit;
+        }
+
+        .edit-booking-form textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .edit-form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .edit-form-actions button {
+            flex: 1;
+            min-width: 110px;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .save-booking-button {
+            background: #f5c76b;
+            color: #111827;
+        }
+
+        .cancel-edit-button {
+            background: #303954;
+            color: white;
+        }
+
+        .book-button {
+            display: inline-block;
+            margin-top: 25px;
+            background: #f5c76b;
+            color: #111827;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 13px 18px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: #929bb6;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 15px;
+            }
+
+            .heading h1 {
+                font-size: 27px;
+            }
+
+            .booking-card {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">EVENTWALE</a>
+            <a href="index.html" class="back-link">← Home</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="heading">
+            <h1>My Bookings 📋</h1>
+            <p>
+                Track your event requests and check their latest status.
+            </p>
+        </section>
+
+        <div id="message" role="status" aria-live="polite">
+            Checking your login...
+        </div>
+
+        <section
+            id="bookingList"
+            class="booking-list"
+            aria-label="Your bookings">
+        </section>
+
+        <a href="booking.html" class="book-button">
+            + Book Another Event
+        </a>
+
+    </main>
+
+    <footer>
+        © 2026 EVENTWALE. Make every moment memorable.
+    </footer>
+
+    <script type="module">
+
+        import { auth, db } from "./firebase.js";
+
+        import {
+            onAuthStateChanged
+        } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+
+        import {
+            ref,
+            get,
+            update,
+            remove
+        } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
+
+
+        const message = document.getElementById("message");
+        const bookingList = document.getElementById("bookingList");
+
+        let currentUser = null;
+        let loadNumber = 0;
+
+
+        function escapeHTML(value) {
+            return String(value ?? "").replace(/[&<>"']/g, char => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            })[char]);
+        }
+
+
+        function formatDate(value) {
+            if (!value) return "Not specified";
+
+            const text = String(value);
+            const date = new Date(text + "T00:00:00");
+
+            return Number.isNaN(date.getTime())
+                ? escapeHTML(text)
+                : date.toLocaleDateString("en-IN", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric"
+                });
+        }
+
+
+        function getStatus(booking) {
+            const status = String(
+                booking.status || "pending"
+            ).toLowerCase();
+
+            if (["pending", "approved", "rejected"].includes(status)) {
+                return status;
+            }
+
+            return "unknown";
+        }
+
+
+        function isPending(booking) {
+            return getStatus(booking) === "pending";
+        }
+
+
+        function createBookingCard(booking) {
+            const status = getStatus(booking);
+
+            const card = document.createElement("article");
+            card.className = "booking-card";
+
+            const venue =
+                booking.preferredVenue ||
+                booking.venuePreference ||
+                "Not specified";
+
+            card.innerHTML = `
+                <h2>${escapeHTML(booking.eventName || "Event Booking")}</h2>
+
+                <p class="detail">
+                    <strong>Booking ID:</strong>
+                    ${escapeHTML(booking.bookingId || "N/A")}
+                </p>
+
+                <p class="detail">
+                    <strong>Event date:</strong>
+                    ${formatDate(booking.eventDate)}
+                </p>
+
+                <p class="detail">
+                    <strong>Time:</strong>
+                    ${escapeHTML(booking.eventTime || "Not specified")}
+                </p>
+
+                <p class="detail">
+                    <strong>Event type:</strong>
+                    ${escapeHTML(booking.eventType || "Not specified")}
+                </p>
+
+                <p class="detail">
+                    <strong>City:</strong>
+                    ${escapeHTML(booking.eventCity || "Not specified")}
+                </p>
+
+                <p class="detail">
+                    <strong>Venue:</strong>
+                    ${escapeHTML(venue)}
+                </p>
+
+                <p class="detail">
+                    <strong>Guests:</strong>
+                    ${escapeHTML(booking.guestCount ?? "Not specified")}
+                </p>
+
+                <p class="detail">
+                    <strong>Budget:</strong>
+                    ${escapeHTML(booking.eventBudget || "Not specified")}
+                </p>
+
+                <span class="status ${escapeHTML(status)}">
+                    ${escapeHTML(
+                        status.charAt(0).toUpperCase() + status.slice(1)
+                    )}
+                </span>
+
+                ${
+                    status === "pending"
+                    ? `
+                        <div class="booking-actions">
+                            <button
+                                type="button"
+                                class="edit-booking-button">
+                                ✏️ Edit Booking
+                            </button>
+
+                            <button
+                                type="button"
+                                class="delete-booking-button">
+                                🗑️ Delete Booking
+                            </button>
+                        </div>
+                    `
+                    : `
+                        <p class="detail">
+                            🔒 This booking cannot be edited or deleted because
+                            its status is ${escapeHTML(status)}.
+                        </p>
+                    `
+                }
+            `;
+
+            if (status === "pending") {
+                card.querySelector(".edit-booking-button")
+                    .addEventListener("click", () => {
+                        showEditForm(card, booking);
+                    });
+
+                card.querySelector(".delete-booking-button")
+                    .addEventListener("click", () => {
+                        deleteBooking(card, booking);
+                    });
+            }
+
+            return card;
+        }
+                function showEditForm(card, booking) {
+
+            if (!currentUser || !isPending(booking)) {
+                alert("Only pending bookings can be edited.");
+                return;
+            }
+
+            if (card.querySelector(".edit-booking-form")) {
+                return;
+            }
+
+            const form = document.createElement("form");
+            form.className = "edit-booking-form";
+
+            form.innerHTML = `
+                <h3>Edit Your Booking</h3>
+
+                <label>
+                    Event Name
+                    <input type="text" name="eventName"
+                        maxlength="120" required>
+                </label>
+
+                <label>
+                    Event Type
+                    <input type="text" name="eventType"
+                        maxlength="100" required>
+                </label>
+
+                <label>
+                    Event Date
+                    <input type="date" name="eventDate" required>
+                </label>
+
+                <label>
+                    Event Time
+                    <input type="time" name="eventTime" required>
+                </label>
+
+                <label>
+                    Event City
+                    <input type="text" name="eventCity"
+                        maxlength="100" required>
+                </label>
+
+                <label>
+                    Preferred Venue
+                    <input type="text" name="preferredVenue"
+                        maxlength="200">
+                </label>
+
+                <label>
+                    Number of Guests
+                    <input type="number" name="guestCount"
+                        min="1" max="100000" step="1" required>
+                </label>
+
+                <label>
+                    Event Budget
+                    <input type="text" name="eventBudget"
+                        maxlength="100" required>
+                </label>
+
+                <label>
+                    Event Requirements
+                    <textarea name="eventRequirements"
+                        maxlength="3000"></textarea>
+                </label>
+
+                <div class="edit-form-actions">
+                    <button type="submit"
+                        class="save-booking-button">
+                        💾 Save Changes
+                    </button>
+
+                    <button type="button"
+                        class="cancel-edit-button">
+                        Cancel
+                    </button>
+                </div>
+
+                <p class="detail edit-message"
+                    aria-live="polite"></p>
+            `;
+
+            form.elements.eventName.value = booking.eventName || "";
+            form.elements.eventType.value = booking.eventType || "";
+            form.elements.eventDate.value = booking.eventDate || "";
+            form.elements.eventTime.value = booking.eventTime || "";
+            form.elements.eventCity.value = booking.eventCity || "";
+
+            form.elements.preferredVenue.value =
+                booking.preferredVenue ||
+                booking.venuePreference ||
+                "";
+
+            form.elements.guestCount.value =
+                booking.guestCount ?? "";
+
+            form.elements.eventBudget.value =
+                booking.eventBudget ?? "";
+
+            form.elements.eventRequirements.value =
+                booking.eventRequirements || "";
+
+            card.appendChild(form);
+
+            form.querySelector(".cancel-edit-button")
+                .addEventListener("click", () => {
+                    form.remove();
+                });
+
+            form.addEventListener("submit", async event => {
+
+                event.preventDefault();
+
+                if (!currentUser) {
+                    alert("Please sign in again.");
+                    return;
+                }
+
+                if (!form.reportValidity()) {
+                    return;
+                }
+
+                const saveButton =
+                    form.querySelector(".save-booking-button");
+
+                const cancelButton =
+                    form.querySelector(".cancel-edit-button");
+
+                const editMessage =
+                    form.querySelector(".edit-message");
+
+                saveButton.disabled = true;
+                cancelButton.disabled = true;
+
+                editMessage.textContent = "Saving your changes...";
+
+                try {
+                    const bookingRef = ref(
+                        db,
+                        `bookings/${currentUser.uid}/${booking.bookingId}`
+                    );
+
+                    const latestSnapshot = await get(bookingRef);
+
+                    if (!latestSnapshot.exists()) {
+                        throw new Error(
+                            "This booking no longer exists."
+                        );
+                    }
+
+                    const latestBooking = latestSnapshot.val();
+
+                    if (getStatus(latestBooking) !== "pending") {
+                        throw new Error(
+                            "This booking is no longer pending."
+                        );
+                    }
+
+                    const updatedFields = {
+                        eventName: form.elements.eventName.value.trim(),
+                        eventType: form.elements.eventType.value.trim(),
+                        eventDate: form.elements.eventDate.value,
+                        eventTime: form.elements.eventTime.value,
+                        eventCity: form.elements.eventCity.value.trim(),
+                        guestCount: Number(form.elements.guestCount.value),
+                        eventRequirements:
+                            form.elements.eventRequirements.value.trim(),
+                        eventBudget:
+                            form.elements.eventBudget.value.trim(),
+                        updatedAt: Date.now()
+                    };
+
+                    const preferredVenue =
+                        form.elements.preferredVenue.value.trim();
+
+                    if (preferredVenue) {
+                        updatedFields.preferredVenue = preferredVenue;
+                    }
+
+                    await update(bookingRef, updatedFields);
+
+                    alert(
+                        "Your booking has been updated successfully!"
+                    );
+
+                    await loadBookings(currentUser);
+
+                } catch (error) {
+                    console.error("Booking update failed:", error);
+
+                    editMessage.textContent =
+                        error.code === "PERMISSION_DENIED"
+                        ? "Firebase denied this update. Check your Database Rules."
+                        : error.message ||
+                          "Unable to update this booking.";
+
+                    saveButton.disabled = false;
+                    cancelButton.disabled = false;
+                }
+            });
+        }
+
+
+        async function deleteBooking(card, booking) {
+
+            if (!currentUser || !isPending(booking)) {
+                alert("Only pending bookings can be deleted.");
+                return;
+            }
+
+            const confirmed = confirm(
+                "Are you sure you want to delete this booking? This action cannot be undone."
+            );
+
+            if (!confirmed) {
+                return;
+            }
+
+            const deleteButton =
+                card.querySelector(".delete-booking-button");
+
+            if (deleteButton) {
+                deleteButton.disabled = true;
+                deleteButton.textContent = "Deleting...";
+            }
+
+            try {
+                const bookingRef = ref(
+                    db,
+                    `bookings/${currentUser.uid}/${booking.bookingId}`
+                );
+
+                const latestSnapshot = await get(bookingRef);
+
+                if (!latestSnapshot.exists()) {
+                    throw new Error(
+                        "This booking has already been deleted."
+                    );
+                }
+
+                const latestBooking = latestSnapshot.val();
+
+                if (getStatus(latestBooking) !== "pending") {
+                    throw new Error(
+                        "This booking is no longer pending."
+                    );
+                }
+
+                await remove(bookingRef);
+
+                alert("Your booking has been deleted successfully!");
+
+                await loadBookings(currentUser);
+
+            } catch (error) {
+                console.error("Booking deletion failed:", error);
+
+                alert(
+                    error.code === "PERMISSION_DENIED"
+                    ? "Firebase denied deletion. Check your Database Rules."
+                    : error.message ||
+                      "Unable to delete the booking."
+                );
+
+                if (deleteButton) {
+                    deleteButton.disabled = false;
+                    deleteButton.textContent = "🗑️ Delete Booking";
+                }
+            }
+        }
+
+
+        async function loadBookings(user) {
+
+            if (!user) return;
+
+            const thisLoad = ++loadNumber;
+
+            bookingList.replaceChildren();
+            message.textContent = "Loading your bookings...";
+
+            try {
+                const snapshot = await get(
+                    ref(db, `bookings/${user.uid}`)
+                );
+
+                if (
+                    thisLoad !== loadNumber ||
+                    !currentUser ||
+                    currentUser.uid !== user.uid
+                ) {
+                    return;
+                }
+
+                if (!snapshot.exists()) {
+                    message.textContent =
+                        "You haven't made any bookings yet. Book your first event!";
+
+                    return;
+                }
+
+                const bookings = [];
+
+                snapshot.forEach(child => {
+                    bookings.push({
+                        ...child.val(),
+                        bookingId: child.key
+                    });
+                });
+
+                bookings.sort((a, b) => {
+                    const dateA = Number(a.createdAt) || 0;
+                    const dateB = Number(b.createdAt) || 0;
+
+                    return dateB - dateA;
+                });
+
+                bookings.forEach(booking => {
+                    bookingList.appendChild(
+                        createBookingCard(booking)
+                    );
+                });
+
+                message.textContent =
+                    `You have ${bookings.length} booking request(s).`;
+
+            } catch (error) {
+                console.error("Unable to load bookings:", error);
+
+                if (thisLoad !== loadNumber) return;
+
+                message.textContent =
+                    error.code === "PERMISSION_DENIED"
+                    ? "Access denied. Please check your Firebase Database Rules."
+                    : "We couldn't load your bookings. Please check your connection and try again.";
+            }
+        }
+
+
+        onAuthStateChanged(auth, async user => {
+
+            currentUser = user;
+            loadNumber++;
+
+            bookingList.replaceChildren();
+
+            if (!user) {
+                message.textContent =
+                    "Please sign in to view your bookings.";
+
+                return;
+            }
+
+            await loadBookings(user);
+        });
+
+    </script>
+
+</body>
+</html>

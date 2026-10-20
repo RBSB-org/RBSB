@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Event | RBSB Events</title>
+
+    <meta name="description"
+        content="Submit your event booking enquiry with RBSB Events and share your celebration requirements.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">RBSB<span>EVENTS</span></a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="venues.html">Venues</a>
+            <a href="services.html">Services</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+    <span class="auth-loading">Checking account...</span>
+</div>
+    </header>
+
+
+    <!-- BOOKING HERO -->
+    <section class="booking-hero">
+
+        <div class="booking-hero-content">
+
+            <span class="section-tag">LET'S MAKE IT MEMORABLE</span>
+
+            <h1>Start Planning Your Perfect Event</h1>
+
+            <p>
+                Tell us about your celebration, your preferences
+                and your budget. Begin organizing your special occasion
+                with RBSB EVENTS.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING INTRODUCTION -->
+    <section class="booking-intro">
+
+        <span class="section-tag">YOUR EVENT STARTS HERE</span>
+
+        <h2>Share Your Event Requirements</h2>
+
+        <p>
+            Complete the enquiry form below with the details you know.
+            You can update your plans as your event takes shape.
+        </p>
+
+    </section>
+
+
+    <!-- BOOKING FORM SECTION -->
+    <section class="booking-form-section">
+
+        <div class="booking-form-container">
+
+            <div class="booking-form-heading">
+
+                <h2>Event Booking Enquiry</h2>
+
+                <p>Fields marked with * are required.</p>
+
+            </div>
+
+
+            <form id="eventBookingForm" class="event-booking-form">
+
+                <!-- SECTION 1: PERSONAL DETAILS -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">01</span>
+
+                        <div>
+                            <h3>Your Details</h3>
+                            <p>Tell us how to identify and contact you.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName"
+                                name="customerName"
+                                placeholder="Enter your full name"
+                                autocomplete="name" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="customerEmail">Email Address *</label>
+                            <input type="email" id="customerEmail"
+                                name="customerEmail"
+                                placeholder="example@email.com"
+                                autocomplete="email" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone"
+                                name="customerPhone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="customerCity">Your City *</label>
+                            <input type="text" id="customerCity"
+                                name="customerCity"
+                                placeholder="e.g. Ludhiana"
+                                autocomplete="address-level2" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 2: EVENT DETAILS -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">02</span>
+
+                        <div>
+                            <h3>Event Details</h3>
+                            <p>Share the basic information about your event.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="eventName">Event Name *</label>
+                            <input type="text" id="eventName"
+                                name="eventName"
+                                placeholder="e.g. My Birthday Celebration"
+                                required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventType">Event Type *</label>
+
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="engagement">Engagement</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="college">College Event</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="family">Family Function</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventDate">Preferred Event Date *</label>
+                            <input type="date" id="eventDate"
+                                name="eventDate" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventTime">Preferred Time</label>
+
+                            <select id="eventTime" name="eventTime">
+                                <option value="">Select Time</option>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="guestCount">
+                                Expected Number of Guests *
+                            </label>
+
+                            <input type="number" id="guestCount"
+                                name="guestCount" min="1"
+                                placeholder="e.g. 150" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="eventCity">Event Location *</label>
+                            <input type="text" id="eventCity"
+                                name="eventCity"
+                                placeholder="Where will the event take place?"
+                                required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 3: VENUE PREFERENCES -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">03</span>
+
+                        <div>
+                            <h3>Venue Preferences</h3>
+                            <p>Tell us what type of venue you prefer.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="venuePreference">
+                                Preferred Venue Type
+                            </label>
+
+                            <select id="venuePreference" name="venuePreference">
+                                <option value="">Not Decided Yet</option>
+                                <option value="banquet">Banquet Hall</option>
+                                <option value="garden">Garden Venue</option>
+                                <option value="hotel">Hotel Venue</option>
+                                <option value="farmhouse">Farmhouse</option>
+                                <option value="party">Party Hall</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="preferredVenue">
+                                Preferred Venue Name
+                            </label>
+
+                            <select id="preferredVenue" name="preferredVenue">
+                                <option value="">No Preference</option>
+                                <option value="royal-hall">
+                                    Royal Celebration Hall
+                                </option>
+                                <option value="green-garden">
+                                    Green Garden Venue
+                                </option>
+                                <option value="party-lounge">
+                                    Celebration Party Lounge
+                                </option>
+                                <option value="grand-hotel">
+                                    Grand Heritage Hotel
+                                </option>
+                                <option value="serenity-farmhouse">
+                                    Serenity Farmhouse
+                                </option>
+                                <option value="royal-orchid">
+                                    Royal Orchid Banquet
+                                </option>
+                                <option value="other">Other / Not Listed</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 4: BUDGET -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">04</span>
+
+                        <div>
+                            <h3>Your Budget</h3>
+                            <p>Set an estimated spending range for your event.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-fields-grid">
+
+                        <div class="booking-field">
+                            <label for="eventBudget">
+                                Estimated Total Budget *
+                            </label>
+
+                            <select id="eventBudget" name="eventBudget" required>
+                                <option value="">Select Your Budget</option>
+                                <option value="under-25000">Under ₹25,000</option>
+                                <option value="25000-50000">
+                                    ₹25,000 – ₹50,000
+                                </option>
+                                <option value="50000-100000">
+                                    ₹50,000 – ₹1,00,000
+                                </option>
+                                <option value="100000-200000">
+                                    ₹1,00,000 – ₹2,00,000
+                                </option>
+                                <option value="above-200000">
+                                    Above ₹2,00,000
+                                </option>
+                                <option value="undecided">Not Decided Yet</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="servicePreference">
+                                Preferred Service Package
+                            </label>
+
+                            <select id="servicePreference"
+                                name="servicePreference">
+                                <option value="">Choose Services Later</option>
+                                <option value="venue-only">Venue Only</option>
+                                <option value="decoration-catering">
+                                    Decoration &amp; Catering
+                                </option>
+                                <option value="photo-video">
+                                    Photography &amp; Videography
+                                </option>
+                                <option value="multiple-services">
+                                    Multiple Event Services
+                                </option>
+                                <option value="full-planning">
+                                    Complete Event Planning
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECTION 5: ADDITIONAL REQUIREMENTS -->
+                <div class="booking-form-group">
+
+                    <div class="booking-group-heading">
+
+                        <span class="booking-step-number">05</span>
+
+                        <div>
+                            <h3>Additional Requirements</h3>
+                            <p>Tell us about any special preferences or ideas.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="eventRequirements">
+                            Describe Your Requirements
+                        </label>
+
+                        <textarea id="eventRequirements"
+                            name="eventRequirements"
+                            rows="6"
+                            placeholder="Describe your event theme, decoration ideas, food preferences or other requirements..."></textarea>
+                    </div>
+
+                    <div class="booking-field booking-checkbox-field">
+
+                        <input type="checkbox" id="termsAgreement"
+                            name="termsAgreement" required>
+
+                        <label for="termsAgreement">
+                            I confirm that the information provided is accurate
+                            and agree to be contacted regarding this enquiry. *
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM BUTTONS -->
+                <div class="booking-form-actions">
+
+                    <button type="submit" class="primary-btn">
+                        Submit Booking Enquiry
+                    </button>
+
+                    <button type="reset" class="booking-reset-btn">
+                        Clear Form
+                    </button>
+
+                </div>
+
+                <!-- Booking status is shown only after Firebase confirms a successful submission. -->
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT HAPPENS NEXT -->
+    <section class="booking-next-steps">
+
+        <div class="booking-section-heading">
+
+            <span class="section-tag">SIMPLE EVENT PLANNING</span>
+
+            <h2>What Happens Next?</h2>
+
+            <p>Here's how the enquiry process is designed to work.</p>
+
+        </div>
+
+        <div class="booking-next-grid">
+
+            <article class="booking-next-card">
+                <span class="process-number">01</span>
+
+                <h3>Share Your Details</h3>
+
+                <p>
+                    Complete the form with your event details,
+                    requirements and estimated budget.
+                </p>
+            </article>
+
+            <article class="booking-next-card">
+                <span class="process-number">02</span>
+
+                <h3>Review Your Requirements</h3>
+
+                <p>
+                    Review your selected event type, preferred venue,
+                    guest count and budget before proceeding.
+                </p>
+            </article>
+
+            <article class="booking-next-card">
+                <span class="process-number">03</span>
+
+                <h3>Plan Your Celebration</h3>
+
+                <p>
+                    Use your submitted details as a starting point
+                    for organizing a memorable event.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING CTA -->
+    <section class="booking-cta">
+
+        <div class="booking-cta-content">
+
+            <span class="section-tag">YOUR MOMENT, YOUR WAY</span>
+
+            <h2>Every Great Event Starts with an Idea</h2>
+
+            <p>
+                From intimate gatherings to grand celebrations,
+                RBSB Events helps you bring your event vision to life.
+            </p>
+
+            <a href="events.html" class="primary-btn">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    RBSB<span>EVENTS</span>
+                </a>
+
+                <p>
+                    Making every celebration special with thoughtful
+                    planning, beautiful venues and memorable experiences.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="venues.html">Venues</a>
+                <a href="services.html">Services</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Plan Your Event</h3>
+
+                <a href="booking.html">Book an Event</a>
+                <a href="budget.html">Budget Planner</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Account</h3>
+
+                <a href="login.html">Login</a>
+                <a href="signup.html">Create Account</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 RBSB Events. All rights reserved.
+            </p>
+
+            <p>Designed for celebrations that matter.</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- LOGIN REQUIRED MODAL -->
+    <style>
+        .login-required-overlay{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,12,24,.78);backdrop-filter:blur(6px)}
+        .login-required-overlay.is-visible{display:flex;animation:bookingFadeIn .2s ease}
+        .login-required-card{position:relative;width:min(430px,100%);padding:32px 24px;text-align:center;background:var(--white,#fff);color:var(--navy,#14243a);border-radius:22px;box-shadow:0 24px 75px rgba(0,0,0,.35)}
+        .login-required-icon{width:68px;height:68px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:#fff3d9;font-size:32px}
+        .login-required-card h2{margin:0 0 10px}.login-required-card p{line-height:1.65;margin:0 0 22px;color:#526071}
+        .login-required-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+        .login-required-actions a,.login-required-actions button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:10px;padding:12px 17px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+        .login-required-login{background:var(--navy,#14243a);color:#fff}.login-required-signup{background:var(--accent,#c9a66b);color:#14243a}.login-required-close{background:#edf0f4;color:#263449}
+    </style>
+    <div class="login-required-overlay" id="loginRequiredOverlay" role="dialog" aria-modal="true" aria-labelledby="loginRequiredTitle" aria-describedby="loginRequiredDescription">
+        <div class="login-required-card">
+            <div class="login-required-icon" aria-hidden="true">🔐</div>
+            <h2 id="loginRequiredTitle">Login First!</h2>
+            <p id="loginRequiredDescription">Please log in or create an account before booking an event. Your booking will be linked securely to your account.</p>
+            <div class="login-required-actions">
+                <a class="login-required-login" href="login.html">Login</a>
+                <a class="login-required-signup" href="signup.html">Sign Up</a>
+                <button class="login-required-close" id="closeLoginRequired" type="button">Maybe Later</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SUCCESS MODAL -->
+    <style>
+        .booking-result-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(8,18,32,.72);backdrop-filter:blur(5px)}
+        .booking-result-overlay.is-visible{display:flex;animation:bookingFadeIn .22s ease}
+        .booking-result-card{width:min(440px,100%);padding:34px 26px;text-align:center;background:var(--white,#fff);border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.25);color:var(--navy,#14243a)}
+        .booking-success-icon{width:82px;height:82px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;background:#e7f8ee;color:#16834a;font-size:43px;font-weight:800;animation:bookingPop .45s cubic-bezier(.2,.8,.2,1) both}
+        .booking-result-card h2{margin:0 0 10px}.booking-result-card p{line-height:1.7;margin:0 0 14px}.booking-reference{display:inline-block;padding:9px 13px;margin:4px 0 20px;border-radius:9px;background:#f1f5f9;font-weight:700;overflow-wrap:anywhere}
+        .booking-result-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.booking-result-actions button{border:0;border-radius:9px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}.booking-home-btn{background:#14243a;color:white}.booking-close-btn{background:#e9edf2;color:#14243a}
+        .booking-form-status{display:none;margin:15px 0;padding:12px 14px;border-radius:9px;line-height:1.5}.booking-form-status.show{display:block}.booking-form-status.error{background:#fff0f0;color:#a51f2d}.booking-form-status.info{background:#edf5ff;color:#194d87}
+        @keyframes bookingPop{0%{transform:scale(.45);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}@keyframes bookingFadeIn{from{opacity:0}to{opacity:1}}
+    </style>
+    <div class="booking-result-overlay" id="bookingResultOverlay" role="dialog" aria-modal="true" aria-labelledby="bookingResultTitle">
+        <div class="booking-result-card">
+            <div class="booking-success-icon" aria-hidden="true">✓</div>
+            <h2 id="bookingResultTitle">Booking Request Submitted!</h2>
+            <p id="bookingResultMessage">Your booking request has been saved and is waiting for admin approval.</p>
+            <div class="booking-reference" id="bookingReference"></div>
+            <div class="booking-result-actions">
+                <button class="booking-home-btn" id="bookingBackHome" type="button">Back to Home</button>
+                <button class="booking-close-btn" id="bookingCloseResult" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+    <p class="booking-form-status" id="bookingFormStatus" role="status" aria-live="polite"></p>
+
+    <!-- REAL BOOKING SUBMISSION -->
+    <script type="module">
+        import { auth, db } from "./firebase.js";
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+        import { ref, push, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
+
+        const form = document.getElementById("eventBookingForm");
+        const dateInput = document.getElementById("eventDate");
+        const submitButton = form.querySelector('button[type="submit"]');
+        const statusBox = document.getElementById("bookingFormStatus");
+        const overlay = document.getElementById("bookingResultOverlay");
+        const referenceBox = document.getElementById("bookingReference");
+        const resultMessage = document.getElementById("bookingResultMessage");
+        const loginOverlay = document.getElementById("loginRequiredOverlay");
+        let currentUser = null;
+        let authReady = false;
+        let submitting = false;
+
+        function setLocalMinimumDate() {
+            const now = new Date();
+            dateInput.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        }
+        setLocalMinimumDate();
+
+        function showStatus(message, kind = "info") {
+            statusBox.textContent = message;
+            statusBox.className = `booking-form-status show ${kind}`;
+        }
+        function closeModal() { overlay.classList.remove("is-visible"); }
+        function showLoginRequired() { loginOverlay.classList.add("is-visible"); }
+        function closeLoginRequired() { loginOverlay.classList.remove("is-visible"); }
+        document.getElementById("closeLoginRequired").addEventListener("click", closeLoginRequired);
+        loginOverlay.addEventListener("click", e => { if (e.target === loginOverlay) closeLoginRequired(); });
+        document.getElementById("bookingCloseResult").addEventListener("click", closeModal);
+        document.getElementById("bookingBackHome").addEventListener("click", () => { window.location.href = "index.html"; });
+        overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+        // Wait for Firebase to finish restoring the signed-in session before allowing submission.
+        submitButton.disabled = true;
+        onAuthStateChanged(auth, user => {
+            currentUser = user;
+            authReady = true;
+            submitButton.disabled = false;
+            // Keep the form clean before submission. If a visitor tries to book,
+            // show the dedicated login/signup popup instead of a permanent notice.
+            if (user) {
+                statusBox.className = "booking-form-status";
+            }
+        }, error => {
+            console.error("Could not check sign-in status:", error);
+            authReady = true;
+            submitButton.disabled = false;
+            showStatus("We couldn't verify your sign-in session. Refresh this page and sign in again before booking.", "error");
+        });
+
+        // Click guard runs before browser required-field validation, so a signed-out
+        // visitor always sees the login popup when they try to book.
+        submitButton.addEventListener("click", event => {
+            if (!authReady) {
+                event.preventDefault();
+                showStatus("Checking your sign-in session. Please wait a moment, then try again.", "info");
+                return;
+            }
+            if (!currentUser) {
+                event.preventDefault();
+                showLoginRequired();
+            }
+        });
+
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+            if (submitting) return;
+            if (!form.reportValidity()) return;
+            if (!authReady) {
+                showStatus("Checking your sign-in session. Please wait a moment and submit again.", "info");
+                return;
+            }
+            if (!currentUser) {
+                showLoginRequired();
+                return;
+            }
+            if (dateInput.value < dateInput.min) {
+                showStatus("Please choose today or a future date for your event.", "error");
+                dateInput.focus();
+                return;
+            }
+
+            const get = id => document.getElementById(id).value.trim();
+            const booking = {
+                bookingId: "", userId: currentUser.uid,
+                customerName: get("customerName"),
+                customerEmail: currentUser.email || get("customerEmail"),
+                customerPhone: get("customerPhone"), customerCity: get("customerCity"),
+                eventName: get("eventName"), eventType: get("eventType"),
+                eventDate: get("eventDate"), eventTime: get("eventTime"),
+                guestCount: Number(get("guestCount")), eventCity: get("eventCity"),
+                venuePreference: get("venuePreference"), preferredVenue: get("preferredVenue"),
+                eventBudget: get("eventBudget"), servicePreference: get("servicePreference"),
+                eventRequirements: get("eventRequirements"),
+                status: "pending", emailStatus: "not_sent",
+                createdAt: serverTimestamp(), updatedAt: serverTimestamp()
+            };
+
+            submitting = true;
+            submitButton.disabled = true;
+            const oldButtonText = submitButton.textContent;
+            submitButton.textContent = "Submitting…";
+            statusBox.className = "booking-form-status";
+            try {
+                // Store each customer's bookings under their own UID.
+                const bookingRef = push(ref(db, `bookings/${currentUser.uid}`));
+                booking.bookingId = bookingRef.key;
+                // Never leave the button spinning indefinitely if Firebase/network is unreachable.
+                let timeoutId;
+                try {
+                    await Promise.race([
+                        set(bookingRef, booking),
+                        new Promise((_, reject) => {
+                            timeoutId = setTimeout(() => reject(new Error("BOOKING_TIMEOUT")), 15000);
+                        })
+                    ]);
+                } finally {
+                    clearTimeout(timeoutId);
+                }
+                referenceBox.textContent = `Booking ID: ${bookingRef.key}`;
+                resultMessage.textContent = `Thank you, ${booking.customerName}! Your request has been saved and is now pending admin approval. You will be notified after the admin reviews it.`;
+                overlay.classList.add("is-visible");
+                form.reset();
+                setLocalMinimumDate();
+            } catch (error) {
+                console.error("Booking submission failed:", error);
+                if (error?.code === "PERMISSION_DENIED" || /permission_denied/i.test(error?.message || "")) {
+                    showStatus("Firebase blocked this booking because database rules do not yet allow an authenticated customer to create their own booking. No booking was saved. We need to configure secure rules before retrying.", "error");
+                } else if (error?.message === "BOOKING_TIMEOUT") {
+                    showStatus("Firebase did not respond within 15 seconds. Your booking was not confirmed. Check your internet connection and Firebase Database URL/rules, then try again. If it appears in your database, do not submit it again.", "error");
+                } else {
+                    showStatus(`We couldn't save your booking (${error?.code || error?.message || "unknown error"}). No success confirmation was created. Check your connection and Firebase Database rules, then try again.`, "error");
+                }
+            } finally {
+                submitting = false;
+                submitButton.disabled = false;
+                submitButton.textContent = oldButtonText;
+            }
+        });
+    </script>
+<script type="module" src="auth-nav.js"></script>
+<!-- RBSB EVENTS GLOBAL THEME LOADER -->
+<script>
+(function () {
+    const THEME_KEY = "rbsbAdminTheme";
+
+    function loadRBSBTheme() {
+        let savedTheme;
+
+        try {
+            savedTheme = localStorage.getItem(THEME_KEY);
+        } catch (error) {
+            console.error("RBSB theme storage unavailable:", error);
+            return;
+        }
+
+        if (!savedTheme) return;
+
+        try {
+            const theme = JSON.parse(savedTheme);
+            const root = document.documentElement;
+
+            if (theme.primary) {
+                root.style.setProperty("--primary", theme.primary);
+                root.style.setProperty("--primary-color", theme.primary);
+                root.style.setProperty("--navy", theme.primary);
+                root.style.setProperty("--navy-light", theme.primary);
+            }
+
+            if (theme.accent) {
+                root.style.setProperty("--accent", theme.accent);
+                root.style.setProperty("--accent-color", theme.accent);
+                root.style.setProperty("--gold", theme.accent);
+                root.style.setProperty("--gold-light", theme.accent);
+            }
+
+            if (theme.background) {
+                root.style.setProperty("--page-bg", theme.background);
+                root.style.setProperty("--background-color", theme.background);
+                root.style.setProperty("--ivory", theme.background);
+            }
+
+        } catch (error) {
+            console.error("Could not load RBSB theme:", error);
+        }
+    }
+
+    loadRBSBTheme();
+})();
+</script>
+<script src="theme-mode.js"></script>
+</body>
+
+</html>
