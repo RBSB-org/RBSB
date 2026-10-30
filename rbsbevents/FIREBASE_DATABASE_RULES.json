@@ -1,0 +1,65 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "admins": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": false
+      }
+    },
+    "bookings": {
+      ".read": "auth != null && root.child('admins').child(auth.uid).val() === true",
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || root.child('admins').child(auth.uid).val() === true)",
+        "$bookingId": {
+          ".write": "auth != null && ((auth.uid === $uid && ((!data.exists() && newData.exists() && newData.child('status').val() === 'pending') || (data.exists() && data.child('status').val() === 'pending' && ((!newData.exists()) || (newData.child('status').val() === 'pending' && newData.child('emailStatus').val() === data.child('emailStatus').val() && newData.child('userId').val() === $uid && newData.child('bookingId').val() === $bookingId && newData.child('createdAt').val() === data.child('createdAt').val())))) || root.child('admins').child(auth.uid).val() === true)",
+          ".validate": "!newData.exists() || newData.hasChildren(['bookingId','userId','customerName','customerEmail','customerPhone','customerCity','eventName','eventType','eventDate','eventTime','guestCount','eventCity','venuePreference','preferredVenue','eventBudget','servicePreference','eventRequirements','status','emailStatus','createdAt','updatedAt'])",
+          "bookingId": {
+            ".validate": "newData.isString() && newData.val() === $bookingId"
+          },
+          "userId": {
+            ".validate": "newData.isString() && newData.val() === $uid"
+          },
+          "status": {
+            ".validate": "newData.val() === 'pending' || (auth != null && root.child('admins').child(auth.uid).val() === true && (newData.val() === 'approved' || newData.val() === 'rejected'))"
+          },
+          "emailStatus": {
+            ".validate": "newData.val() === 'not_sent' || newData.val() === 'sent'"
+          },
+          "createdAt": {
+            ".validate": "newData.val() === data.val() || !data.exists()"
+          },
+          "updatedAt": {
+            ".validate": "newData.exists()"
+          },
+          "$other": {
+            ".validate": true
+          }
+        }
+      }
+    },
+    "events": {
+      ".read": true,
+      ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+    },
+    "services": {
+      ".read": true,
+      ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+    },
+    "venues": {
+      ".read": true,
+      ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+    },
+    "locations": {
+      ".read": true,
+      ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+    },
+    "siteSettings": {
+      "theme": {
+        ".read": true,
+        ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+      }
+    }
+  }
+}

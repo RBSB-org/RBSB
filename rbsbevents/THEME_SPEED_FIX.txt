@@ -1,0 +1,8 @@
+THEME SPEED IMPROVEMENT
+
+- theme-cache.js runs synchronously in the page head before style.css and applies the last saved palette from localStorage.
+- site-theme.js then fetches the latest theme from Firebase in the background and refreshes the cache.
+- admin.js updates the same-browser cache after a successful Firebase save.
+- Firebase remains the source of truth; on a different device/browser, the first visit still needs the Firebase response once, after which the theme is cached locally.
+
+Deploy all files together. If an old cached script persists, perform one hard refresh (Ctrl+Shift+R).

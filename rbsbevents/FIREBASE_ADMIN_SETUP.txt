@@ -1,0 +1,21 @@
+EVENTWALE ADMIN BOOKINGS CONNECTION — READ BEFORE DEPLOYING
+
+IMPORTANT
+- The admin dashboard code now uses Firebase Authentication and checks /admins/<UID> === true.
+- Do NOT deploy the dashboard before completing the steps below.
+- The Firebase web config is not an admin secret. The old password in the original admin-login.js was exposed in frontend code. Change that password immediately if it was used anywhere else.
+
+SETUP
+1. In Firebase Console > Authentication > Users, open the intended admin user and copy that user's UID.
+2. In Realtime Database > Data, create a top-level node named `admins`, then a child named exactly the copied UID, with boolean value `true` (not the text string "true"). Only do this for trusted admin accounts. Your current rules say admins cannot write this node, so provision it in the Firebase Console.
+3. Open Realtime Database > Rules. Back up your current rules, then review and publish the contents of FIREBASE_DATABASE_RULES.json. These rules allow an authorized admin to read bookings and set status to approved/rejected; customers can only change/delete their own pending bookings. Test with a non-admin account before going live.
+4. Upload the updated rbsb_work files to your hosting. Ensure admin-login.js is loaded as a module (the included admin-login.html already does this).
+5. Sign in through admin-login.html using the admin user's Firebase Authentication email/password. The user must also have /admins/<UID> = true.
+
+NOTES / LIMITATIONS
+- This connects the dashboard bookings table, recent bookings, total bookings, pending count, and approve/reject buttons.
+- It does not implement server-side email notifications or Cloud Functions.
+- Current data model expected: bookings/<customer UID>/<booking ID>, matching booking.html.
+- Firebase Realtime Database rules are the real security boundary. UI checks alone are not security.
+- After changing rules, verify a customer cannot read another customer's bookings and cannot edit/delete after status becomes approved/rejected.
+- Existing admin login hardcoded credentials are removed; there is no default admin password in the updated files.

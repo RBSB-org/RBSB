@@ -1,0 +1,7 @@
+HEADER LAYOUT CORRECTION
+
+All public pages now use a consistent .container.header-container wrapper. The previous update styled this wrapper but several pages did not contain it, causing the logo, navigation and profile control to fall into separate rows with excessive whitespace. This correction standardizes the markup and responsive grid.
+
+The shared authenticated profile control now uses a photo-only circular button. When no user photo is available or the image fails, a neutral silhouette icon appears instead of the word User. Names remain only inside the dropdown menu.
+
+Social footer links remain intentionally unlinked; add your official URLs where marked in the HTML comments.

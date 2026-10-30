@@ -1,0 +1,19 @@
+EVENTWALE - FINAL BOOKING NAVIGATION FIX
+
+Changes in this package:
+1. Fixed the authenticated profile dropdown's "My Bookings" link. It now opens my-booking.html instead of booking.html (the new-booking form).
+2. Fixed the homepage's My Bookings links to use the relative path my-booking.html, avoiding a hard-coded /rbsb_work/ deployment path.
+3. Removed the global dark/light mode switch script, its script references, and the appended dark-mode CSS overrides.
+4. Removed the empty placeholder file and an inactive commented-out pageshow handler.
+5. Preserved the Firebase booking form, My Bookings listing/edit/delete logic, Firebase configuration, database rules reference, and EmailJS integration.
+
+Validation performed:
+- JavaScript syntax checks passed for inline scripts and standalone JavaScript files.
+- Relative local HTML asset/link checks passed.
+- Confirmed there are no remaining references to theme-mode.js, modeToggle, data-mode, or mode-toggle in active HTML/JS/CSS.
+
+Important live-environment checks:
+- This archive cannot verify Firebase Authentication, deployed Realtime Database rules, hosting paths, or EmailJS account/template configuration.
+- Deploy the contents of rbsb_work to the same hosting location as before.
+- Test with a signed-in user: create a booking, open My Bookings from the profile dropdown, edit a pending booking, and delete a pending test booking.
+- Check the browser DevTools Console and Network panel if the live service reports an error.
