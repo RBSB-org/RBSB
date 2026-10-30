@@ -1,7 +1,0 @@
-REFERENCE DESIGN UPDATE
-
-Header: single horizontal desktop row with logo, centred nav and photo-only avatar; compact responsive two-row mobile layout. Avatar dropdown styled as a clean rounded white menu with profile, bookings, budget and sign-out items.
-
-Footer: dark five-column layout inspired by supplied reference: brand/contact, services, quick links, privacy/info, and follow us. Social entries are intentionally non-clickable spans; commented examples show where to add official href URLs.
-
-No social destinations have been invented. Existing page destinations and authentication handlers are retained.
